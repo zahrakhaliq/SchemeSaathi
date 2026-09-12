@@ -1,0 +1,740 @@
+[
+  {
+    "name": "Chief Minister Punjab Kissan Card (Phase-II)",
+    "category": "Agriculture",
+    "description": "Interest-free agricultural loans for eligible Kissan Card holders.",
+    "benefits": "The Agriculture Department's 2026-27 initiative page lists loans up to Rs. 360,000 per cropping season for 1 million Kissan Card holders.",
+    "eligibility": [
+      "Farmer/Kissan Card beneficiary requirements apply.",
+      "Current conditions must be verified on the official source."
+    ],
+    "requirements": [
+      "Check the latest Agriculture Department instructions before applying."
+    ],
+    "application_process": "Follow the current instructions published by the Agriculture Department.",
+    "official_url": "https://agripunjab.punjab.gov.pk/agri-adp-cminitiatives",
+    "keywords": "farmer agriculture loan kisan kissan card interest free crop",
+    "status": "Current initiative (2026-27)",
+    "last_verified": "September 2026",
+    "rules": {
+      "farmer_required": true
+    }
+  },
+  {
+    "name": "Chief Minister Punjab Green Tractor Program (Low Power) Phase-IV",
+    "category": "Agriculture",
+    "description": "Subsidized 50-65 HP tractors for eligible farmers.",
+    "benefits": "The 2026-27 Agriculture Department page lists 10,000 subsidized tractors and a subsidy of Rs. 750,000 per tractor.",
+    "eligibility": [
+      "Farmers having land holding of 5 acres and above are listed as the target group.",
+      "Other application conditions must be verified from the official source."
+    ],
+    "requirements": [
+      "Land holding of 5 acres or above is listed on the official initiative page."
+    ],
+    "application_process": "Check the Agriculture Department's latest application instructions.",
+    "official_url": "https://agripunjab.punjab.gov.pk/agri-adp-cminitiatives",
+    "keywords": "green tractor farmer tractor subsidy agriculture 5 acres",
+    "status": "Current initiative (2026-27)",
+    "last_verified": "September 2026",
+    "rules": {
+      "farmer_required": true
+    }
+  },
+  {
+    "name": "Chief Minister Punjab Green Tractor Program (Hi Power) Phase-V",
+    "category": "Agriculture",
+    "description": "Subsidized 75-125 HP tractors for eligible farmers.",
+    "benefits": "The 2026-27 Agriculture Department page lists 9,500 subsidized tractors and a subsidy of Rs. 1,000,000 per tractor.",
+    "eligibility": [
+      "Farmers having land holding of 7 acres and above are listed as the target group.",
+      "Other application conditions must be verified from the official source."
+    ],
+    "requirements": [
+      "Land holding of 7 acres or above is listed on the official initiative page."
+    ],
+    "application_process": "Check the Agriculture Department's latest application instructions.",
+    "official_url": "https://agripunjab.punjab.gov.pk/agri-adp-cminitiatives",
+    "keywords": "green tractor high power farmer tractor subsidy agriculture 7 acres",
+    "status": "Current initiative (2026-27)",
+    "last_verified": "September 2026",
+    "rules": {
+      "farmer_required": true
+    }
+  },
+  {
+    "name": "Work for Punjab: Internship Scheme for Agriculture Graduates (Phase-II)",
+    "category": "Agriculture",
+    "description": "An internship initiative for agriculture graduates under Punjab Agriculture Department initiatives.",
+    "benefits": "The Agriculture Department lists this as a 2026-27 to 2027-28 initiative.",
+    "eligibility": [
+      "Agriculture graduate requirements apply.",
+      "Current age, degree, dates and application conditions must be verified on the official source."
+    ],
+    "requirements": [
+      "Agriculture qualification and other program-specific conditions must be verified."
+    ],
+    "application_process": "Check the official Agriculture Department announcement for the current intake.",
+    "official_url": "https://agripunjab.punjab.gov.pk/agri-adp-cminitiatives",
+    "keywords": "agriculture graduate internship work for punjab",
+    "status": "Current initiative (2026-27)",
+    "last_verified": "September 2026",
+    "rules": {
+      "student_required": false
+    }
+  },
+  {
+    "name": "Punjab Climate Resilient and Low Carbon Agriculture Mechanization Project (P-CLAMP)",
+    "category": "Agriculture",
+    "description": "Agricultural machinery support through matching grants and financing.",
+    "benefits": "The official page lists a 30% matching grant per machine, up to Rs. 5 million per machine, with farmer/service-provider equity and bank financing.",
+    "eligibility": [
+      "Farmers/service providers and specified machinery requirements apply.",
+      "Verify current project conditions before applying."
+    ],
+    "requirements": [
+      "Machine-specific and applicant-specific requirements apply."
+    ],
+    "application_process": "Follow the current Agriculture Department project instructions.",
+    "official_url": "https://agripunjab.punjab.gov.pk/agri-adp-newschemes",
+    "keywords": "P CLAMP agriculture machinery grant farmer service provider financing",
+    "status": "Current project (2025-26 to 2030-31)",
+    "last_verified": "September 2026",
+    "rules": {
+      "farmer_required": true
+    }
+  },
+  {
+    "name": "Groundwater Recharging Through Borehole Systems in Agricultural Fields",
+    "category": "Agriculture",
+    "description": "Pilot initiative for groundwater recharge systems in agricultural fields.",
+    "benefits": "The official Agriculture Department page lists 1,000 on-farm groundwater recharge systems with a 70% subsidy.",
+    "eligibility": [
+      "Agricultural field/site and project-specific requirements apply.",
+      "Verify current conditions from the official source."
+    ],
+    "requirements": [
+      "Site and project-specific requirements apply."
+    ],
+    "application_process": "Check the official Agriculture Department instructions.",
+    "official_url": "https://agripunjab.punjab.gov.pk/agri-adp-newschemes",
+    "keywords": "groundwater recharge subsidy farmer borehole agriculture water",
+    "status": "Current project (2026-27)",
+    "last_verified": "September 2026",
+    "rules": {
+      "farmer_required": true
+    }
+  },
+  {
+    "name": "High Efficiency Irrigation Systems (HEIS) Subsidy",
+    "category": "Agriculture",
+    "description": "Subsidized high-efficiency drip/sprinkler irrigation systems for eligible agricultural projects.",
+    "benefits": "For PRIAT, the official Agriculture Department page lists a 75% government share for 0-7.5 acres and 60% for 7.6-12.5 acres.",
+    "eligibility": [
+      "Eligible farming/project-area requirements apply.",
+      "Applicable subsidy depends on the project and acreage slab."
+    ],
+    "requirements": [
+      "Project-area and site-specific requirements apply."
+    ],
+    "application_process": "Check the Agriculture Department's official subsidy information and current instructions.",
+    "official_url": "https://agripunjab.punjab.gov.pk/node/9410",
+    "keywords": "drip sprinkler irrigation subsidy farmer HEIS water PRIAT",
+    "status": "Ongoing program",
+    "last_verified": "September 2026",
+    "rules": {
+      "farmer_required": true
+    }
+  },
+  {
+    "name": "CM Punjab Asaan Karobar Card",
+    "category": "Business",
+    "description": "A digital SME card providing clean interest-free financing to existing and prospective small entrepreneurs in Punjab.",
+    "benefits": "Up to Rs. 1 million; 3-year tenure with a 3-month grace period, subject to official terms.",
+    "eligibility": [
+      "Age 21 to 57 years.",
+      "Pakistani national and Punjab resident with valid CNIC.",
+      "Existing/prospective business location in Punjab.",
+      "Mobile phone registered in the applicant's own name."
+    ],
+    "requirements": [
+      "Valid CNIC.",
+      "Own-name mobile number.",
+      "Business location in Punjab."
+    ],
+    "application_process": "Use the official PSIC scheme page and current application process.",
+    "official_url": "https://psic.punjab.gov.pk/node/177",
+    "keywords": "business entrepreneur small business loan asaan karobar card interest free SME",
+    "status": "Ongoing",
+    "last_verified": "September 2026",
+    "rules": {
+      "min_age": 21,
+      "max_age": 57,
+      "business_required": true
+    }
+  },
+  {
+    "name": "CM Punjab Asaan Karobar Finance",
+    "category": "Business",
+    "description": "Interest-free financing for small and medium entrepreneurs to establish, expand or modernize businesses in Punjab.",
+    "benefits": "Tier-1 loans of Rs. 1-5 million and Tier-2 loans of Rs. 5-30 million, subject to official terms.",
+    "eligibility": [
+      "Age 25 to 55 years.",
+      "Valid CNIC and NTN.",
+      "Clean ECIB/credit history.",
+      "Business premises requirement applies for specified loan purposes."
+    ],
+    "requirements": [
+      "Valid CNIC.",
+      "Valid NTN.",
+      "Clean ECIB/credit history.",
+      "Business premises requirement may apply."
+    ],
+    "application_process": "Use the official PSIC scheme page for current application instructions.",
+    "official_url": "https://psic.punjab.gov.pk/node/178",
+    "keywords": "business SME finance loan entrepreneur asaan karobar interest free startup expansion",
+    "status": "Ongoing",
+    "last_verified": "September 2026",
+    "rules": {
+      "min_age": 25,
+      "max_age": 55,
+      "business_required": true
+    }
+  },
+  {
+    "name": "Chief Minister Honhaar Scholarship Program",
+    "category": "Education",
+    "description": "Punjab's undergraduate scholarship initiative providing full tuition support for eligible students in selected institutions/disciplines.",
+    "benefits": "100% tuition fees for selected eligible students; the official Punjab Portal page describes 50,000 scholarships for the program.",
+    "eligibility": [
+      "Punjab domicile or other officially permitted provincial eligibility applies.",
+      "Family monthly income below Rs. 300,000 is stated on the official page.",
+      "Enrollment in selected disciplines/institutions and semester requirements apply.",
+      "Minimum Intermediate/FSc marks vary by discipline/institution; merit selection applies."
+    ],
+    "requirements": [
+      "Family income information may be required.",
+      "Academic marks and enrollment/semester information are important.",
+      "Check the latest official program announcement before applying."
+    ],
+    "application_process": "Apply through the official Honhaar Scholarship portal linked from the Punjab Portal.",
+    "official_url": "https://punjab.gov.pk/node/6433",
+    "keywords": "student scholarship university tuition education honhaar financial help",
+    "status": "Government program; verify current intake",
+    "last_verified": "September 2026",
+    "rules": {
+      "student_required": true,
+      "max_income": 300000,
+      "income_required": true,
+      "marks_required": true
+    }
+  },
+  {
+    "name": "CM Punjab Laptop Program",
+    "category": "Education",
+    "description": "Punjab Higher Education Department laptop initiative for eligible students in public-sector institutions.",
+    "benefits": "Eligible students may receive a laptop under the CM Punjab Laptop Program, subject to the current intake and official criteria.",
+    "eligibility": [
+      "Punjab domicile is required.",
+      "BS students: 65% or above in Intermediate.",
+      "Medical and dental students: 80% or above in Intermediate.",
+      "DVM students in public-sector universities/colleges: 75% or above in Intermediate.",
+      "BS Nursing students in public-sector nursing colleges: 65% or above in Intermediate.",
+      "Student must not have received a laptop under a previous laptop scheme."
+    ],
+    "requirements": [
+      "Punjab domicile.",
+      "Current enrollment in an eligible program/institution.",
+      "Intermediate marks.",
+      "Previous laptop-scheme status."
+    ],
+    "application_process": "Check the current intake and application instructions on the official Higher Education Department page and linked CM Laptop portal.",
+    "official_url": "https://hed.punjab.gov.pk/node/1712",
+    "keywords": "student laptop education university college digital inclusion computer device",
+    "status": "Published criteria; verify current intake",
+    "last_verified": "September 2026",
+    "rules": {
+      "student_required": true,
+      "min_marks": 65,
+      "marks_required": true
+    }
+  },
+  {
+    "name": "Zakat Educational Stipend (General)",
+    "category": "Education",
+    "description": "Educational financial assistance for deserving students through Punjab Zakat & Ushr Department.",
+    "benefits": "Financial assistance intended to help deserving students continue their education.",
+    "eligibility": [
+      "Deserving-student and departmental criteria apply.",
+      "Verify current requirements and local Zakat Committee process."
+    ],
+    "requirements": [
+      "Student status and departmental/deservingness criteria may apply."
+    ],
+    "application_process": "Check the official Punjab Zakat & Ushr Department information.",
+    "official_url": "https://zakat.punjab.gov.pk/useful-links",
+    "keywords": "student education stipend financial assistance zakat scholarship poor",
+    "status": "Departmental program; verify current process",
+    "last_verified": "September 2026",
+    "rules": {
+      "student_required": true
+    }
+  },
+  {
+    "name": "CM Punjab Free Solar Panel Scheme",
+    "category": "Energy",
+    "description": "Punjab's solar panel initiative for eligible electricity consumers, subject to the published program criteria.",
+    "benefits": "Solar systems are provided to eligible consumers under the scheme, subject to official criteria and program availability.",
+    "eligibility": [
+      "Eligibility depends on electricity consumption and other official program criteria.",
+      "Verify current application status and criteria on the official source."
+    ],
+    "requirements": [
+      "Electricity consumer information and program-specific criteria apply."
+    ],
+    "application_process": "Check the official Punjab Portal and relevant energy department instructions.",
+    "official_url": "https://punjab.gov.pk/index.php/flagship-projects?page=2",
+    "keywords": "solar panel electricity bill energy free solar low consumption",
+    "status": "Government flagship program; verify current intake",
+    "last_verified": "September 2026",
+    "rules": {}
+  },
+  {
+    "name": "Import Substitution & Export Enhancement: Sesame, Soybean and Canola",
+    "category": "Agriculture",
+    "description": "Punjab agriculture initiative promoting model farms and improved production of sesame, soybean and canola.",
+    "benefits": "Model farms, crop yield improvement and soybean seed multiplication activities.",
+    "eligibility": [
+      "Farmers and agriculture stakeholders in Punjab; exact participation criteria depend on the activity."
+    ],
+    "requirements": [
+      "Check current Agriculture Department instructions for area, crop and participation requirements."
+    ],
+    "application_process": "Follow the Agriculture Department announcements and field extension instructions.",
+    "official_url": "https://agripunjab.punjab.gov.pk/agri-adp-cminitiatives",
+    "keywords": "agriculture sesame soybean canola crop model farm seed yield",
+    "status": "Official Punjab initiative / scheme",
+    "last_verified": "September 2026",
+    "rules": {
+      "farmer_required": true
+    }
+  },
+  {
+    "name": "CM Punjab Program for Water Efficient Agriculture",
+    "category": "Agriculture",
+    "description": "Program focused on improving on-farm water efficiency through watercourse improvement and laser land levelling.",
+    "benefits": "Watercourse improvement and provision of laser land levellers for farmers/service providers.",
+    "eligibility": [
+      "Farmers and eligible agriculture service providers in Punjab."
+    ],
+    "requirements": [
+      "Current area and participation criteria must be verified."
+    ],
+    "application_process": "Apply/follow instructions through Agriculture Department field offices and official announcements.",
+    "official_url": "https://agripunjab.punjab.gov.pk/agri-adp-cminitiatives",
+    "keywords": "farmer irrigation water efficient agriculture laser land leveller watercourse",
+    "status": "Official Punjab initiative / scheme",
+    "last_verified": "September 2026",
+    "rules": {
+      "farmer_required": true
+    }
+  },
+  {
+    "name": "CM Punjab Hi-Tech Farm Mechanization Financing Program",
+    "category": "Agriculture",
+    "description": "Interest-free financing initiative for eligible farmers and service providers to acquire hi-tech agricultural machinery.",
+    "benefits": "Interest-free loans for machinery such as combine harvesters, planters, transplanters, balers and high-power tractors.",
+    "eligibility": [
+      "Farmers and eligible agricultural service providers."
+    ],
+    "requirements": [
+      "Machinery, financing and applicant criteria must be verified from the latest official instructions."
+    ],
+    "application_process": "Follow the Agriculture Department application/financing instructions.",
+    "official_url": "https://agripunjab.punjab.gov.pk/agri-adp-cminitiatives",
+    "keywords": "farmer machinery hi tech farm mechanization loan harvester planter tractor financing",
+    "status": "Official Punjab initiative / scheme",
+    "last_verified": "September 2026",
+    "rules": {
+      "farmer_required": true
+    }
+  },
+  {
+    "name": "CM Punjab Water Conservation & Livelihood Project in Barani Tract",
+    "category": "Agriculture",
+    "description": "Project supporting water reservoirs, mini dams and solar-coupled water conveyance in rainfed areas.",
+    "benefits": "Water reservoirs/mini dams and solar-coupled water conveyance or lift irrigation schemes.",
+    "eligibility": [
+      "Farmers/communities in eligible Barani tract areas."
+    ],
+    "requirements": [
+      "Location and project-specific eligibility must be verified."
+    ],
+    "application_process": "Use Agriculture Department field channels and current project guidance.",
+    "official_url": "https://agripunjab.punjab.gov.pk/agri-adp-cminitiatives",
+    "keywords": "barani rainfed farmer water reservoir mini dam irrigation solar water",
+    "status": "Official Punjab initiative / scheme",
+    "last_verified": "September 2026",
+    "rules": {
+      "farmer_required": true
+    }
+  },
+  {
+    "name": "Establishment of Model Agriculture Malls in Punjab",
+    "category": "Agriculture",
+    "description": "Government initiative establishing agriculture malls to improve access to agricultural services and inputs.",
+    "benefits": "Agriculture service and input access through model agriculture malls in selected locations.",
+    "eligibility": [
+      "Farmers and agriculture stakeholders in covered districts/divisions."
+    ],
+    "requirements": [
+      "Services and participating locations should be checked on the official source."
+    ],
+    "application_process": "Visit the relevant Model Agriculture Mall or Agriculture Department channel.",
+    "official_url": "https://agripunjab.punjab.gov.pk/agri-malls",
+    "keywords": "farmer agriculture mall inputs services seeds fertilizer support",
+    "status": "Official Punjab initiative / scheme",
+    "last_verified": "September 2026",
+    "rules": {
+      "farmer_required": true
+    }
+  },
+  {
+    "name": "Punjab Resilient and Inclusive Agriculture Transformation (PRIAT)",
+    "category": "Agriculture",
+    "description": "Large agriculture transformation program supporting irrigation, water efficiency, value addition and market access.",
+    "benefits": "High-efficiency irrigation, solar systems for irrigation, water storage, value addition machinery and market-access support.",
+    "eligibility": [
+      "Farmers and eligible farmer groups/service providers in Punjab."
+    ],
+    "requirements": [
+      "Program area and activity-specific criteria apply. Verify before applying."
+    ],
+    "application_process": "Follow Agriculture Department/PRIAT implementation guidance.",
+    "official_url": "https://agripunjab.punjab.gov.pk/node/10154",
+    "keywords": "farmer PRIAT irrigation solar water storage machinery value addition markets",
+    "status": "Official Punjab initiative / scheme",
+    "last_verified": "September 2026",
+    "rules": {
+      "farmer_required": true
+    }
+  },
+  {
+    "name": "Punjab Clean Air Program: Super Seeder Subsidy",
+    "category": "Agriculture",
+    "description": "Agriculture initiative providing subsidized super seeders to reduce crop-residue burning and improve farm practices.",
+    "benefits": "Provision of super seeders at a government subsidy for eligible farmers.",
+    "eligibility": [
+      "Farmers and eligible agricultural machinery users."
+    ],
+    "requirements": [
+      "Subsidy quota, machinery and district criteria must be verified."
+    ],
+    "application_process": "Follow the Agriculture Department scheme instructions.",
+    "official_url": "https://agripunjab.punjab.gov.pk/node/10154",
+    "keywords": "farmer super seeder subsidy residue wheat machinery clean air",
+    "status": "Official Punjab initiative / scheme",
+    "last_verified": "September 2026",
+    "rules": {
+      "farmer_required": true
+    }
+  },
+  {
+    "name": "Punjab Rozgar Scheme (PRS)",
+    "category": "Business",
+    "description": "Punjab Small Industries Corporation financing scheme supporting youth entrepreneurship and micro, small and medium enterprises.",
+    "benefits": "Low-markup loans and support for entrepreneurship, existing businesses and green/resource-efficient enterprises.",
+    "eligibility": [
+      "Eligible entrepreneurs, youth and existing/new SMEs in Punjab."
+    ],
+    "requirements": [
+      "Current financing, sector and applicant criteria must be checked on the official PSIC source."
+    ],
+    "application_process": "Apply through the official Punjab Small Industries Corporation process.",
+    "official_url": "https://psic.punjab.gov.pk/node/14",
+    "keywords": "business loan entrepreneurship SME youth startup small enterprise financing",
+    "status": "Official Punjab initiative / scheme",
+    "last_verified": "September 2026",
+    "rules": {}
+  },
+  {
+    "name": "Interest-Free Financial Support for Artisans of Punjab",
+    "category": "Business",
+    "description": "Interest-free revolving financial support for artisans to establish, strengthen or expand cottage-industry businesses.",
+    "benefits": "Financing support for artisans, self-employment and cottage industry development.",
+    "eligibility": [
+      "Artisans and eligible cottage-industry entrepreneurs in Punjab."
+    ],
+    "requirements": [
+      "Current artisan and business criteria must be verified."
+    ],
+    "application_process": "Follow the PSIC application process for the scheme.",
+    "official_url": "https://psic.punjab.gov.pk/index.php/ongoing",
+    "keywords": "artisan cottage industry business loan interest free handicraft self employment",
+    "status": "Official Punjab initiative / scheme",
+    "last_verified": "September 2026",
+    "rules": {}
+  },
+  {
+    "name": "Interest-Free Loan Scheme for Graduated Incubates of WBICs",
+    "category": "Business",
+    "description": "Interest-free revolving support for women entrepreneurs graduating from Women Business Incubation Centers.",
+    "benefits": "Financing support to help women entrepreneurs establish or grow businesses after incubation.",
+    "eligibility": [
+      "Eligible graduated incubates of Women Business Incubation Centers."
+    ],
+    "requirements": [
+      "Incubation/graduation status and current financing rules must be verified."
+    ],
+    "application_process": "Apply through the relevant PSIC/WBIC process.",
+    "official_url": "https://psic.punjab.gov.pk/projects",
+    "keywords": "women entrepreneur incubator business loan startup financing WBIC",
+    "status": "Official Punjab initiative / scheme",
+    "last_verified": "September 2026",
+    "rules": {}
+  },
+  {
+    "name": "Women Business Incubation Centers (WBIC)",
+    "category": "Business",
+    "description": "Government-supported incubation initiative helping women entrepreneurs turn business ideas into viable enterprises.",
+    "benefits": "Business incubation, resources, mentoring and a conducive environment for women entrepreneurs.",
+    "eligibility": [
+      "Women entrepreneurs and eligible applicants seeking business incubation."
+    ],
+    "requirements": [
+      "Center-specific admission and cohort requirements apply."
+    ],
+    "application_process": "Check PSIC/WBIC announcements for applications and admissions.",
+    "official_url": "https://psic.punjab.gov.pk/index.php/ongoing",
+    "keywords": "women business incubation entrepreneurship startup mentoring women",
+    "status": "Official Punjab initiative / scheme",
+    "last_verified": "September 2026",
+    "rules": {}
+  },
+  {
+    "name": "Rahmatul-lil-Alameen Scholarship",
+    "category": "Education",
+    "description": "Punjab scholarship for students from public-sector institutions, offering merit or need-based support at Intermediate and Bachelor levels.",
+    "benefits": "Scholarship award of Rs.25,000 per annum for selected students.",
+    "eligibility": [
+      "Students who completed Matriculation/HSSC from eligible public-sector institutions and meet current merit/need criteria."
+    ],
+    "requirements": [
+      "Current academic, institution and merit/need criteria must be verified."
+    ],
+    "application_process": "Apply through the HED scholarship portal or institution process.",
+    "official_url": "https://hed.punjab.gov.pk/rehmatul-lil-alameen_scholarship",
+    "keywords": "student scholarship merit need intermediate bachelor rahmatul lil alameen",
+    "status": "Official Punjab initiative / scheme",
+    "last_verified": "September 2026",
+    "rules": {
+      "student_required": true
+    }
+  },
+  {
+    "name": "Punjab Education Endowment Fund (PEEF) Scholarships",
+    "category": "Education",
+    "description": "PEEF provides need-based and merit-linked scholarships to talented and needy students across education levels.",
+    "benefits": "Financial assistance for education from secondary through higher education, subject to current PEEF criteria.",
+    "eligibility": [
+      "Talented/needy students meeting current PEEF eligibility and institutional criteria."
+    ],
+    "requirements": [
+      "Income, academic and institutional requirements vary by scholarship level."
+    ],
+    "application_process": "Apply through the relevant PEEF/institution application process.",
+    "official_url": "https://hed.punjab.gov.pk/peef",
+    "keywords": "student PEEF scholarship needy talented tuition education",
+    "status": "Official Punjab initiative / scheme",
+    "last_verified": "September 2026",
+    "rules": {
+      "student_required": true
+    }
+  },
+  {
+    "name": "Free MDCAT/ECAT Preparatory Classes",
+    "category": "Education",
+    "description": "Free preparatory classes for MDCAT and ECAT students at selected public colleges across Punjab.",
+    "benefits": "Free preparation support for competitive medical and engineering entrance examinations.",
+    "eligibility": [
+      "Students preparing for MDCAT or ECAT at participating colleges."
+    ],
+    "requirements": [
+      "Availability depends on selected public colleges and current program schedule."
+    ],
+    "application_process": "Check HED announcements and participating public colleges.",
+    "official_url": "https://hed.punjab.gov.pk/node/1670",
+    "keywords": "student MDCAT ECAT entrance test free preparation coaching",
+    "status": "Official Punjab initiative / scheme",
+    "last_verified": "September 2026",
+    "rules": {
+      "student_required": true
+    }
+  },
+  {
+    "name": "Chief Minister Transport Programme for Female Colleges",
+    "category": "Education",
+    "description": "Transport facilities initiative supporting female students at selected public-sector colleges.",
+    "benefits": "College transport facilities in covered tehsils/colleges.",
+    "eligibility": [
+      "Female students enrolled in participating public-sector colleges."
+    ],
+    "requirements": [
+      "Coverage depends on participating colleges and routes."
+    ],
+    "application_process": "Check the relevant public college/HED for current transport availability.",
+    "official_url": "https://hed.punjab.gov.pk/node/1672",
+    "keywords": "female student college transport bus education",
+    "status": "Official Punjab initiative / scheme",
+    "last_verified": "September 2026",
+    "rules": {
+      "student_required": true
+    }
+  },
+  {
+    "name": "CM Initiative for Promotion of Renewable Energy Technologies",
+    "category": "Energy",
+    "description": "Punjab Energy Department initiative promoting renewable-energy technologies and clean energy development.",
+    "benefits": "Supports renewable-energy development and related opportunities in Punjab.",
+    "eligibility": [
+      "Households, institutions or stakeholders depend on the specific renewable-energy initiative."
+    ],
+    "requirements": [
+      "Specific eligibility and availability vary by sub-project. Verify the current official announcement."
+    ],
+    "application_process": "Check Energy Department renewable-energy initiatives for current opportunities.",
+    "official_url": "https://energy.punjab.gov.pk/",
+    "keywords": "solar renewable energy clean energy household technology",
+    "status": "Official Punjab initiative / scheme",
+    "last_verified": "September 2026",
+    "rules": {}
+  },
+  {
+    "name": "CM Fund for Indigenization of Solar Panel Production",
+    "category": "Energy",
+    "description": "Punjab Energy Department initiative supporting local solar-panel manufacturing and renewable-energy supply capacity.",
+    "benefits": "Promotes local solar manufacturing and renewable-energy industry development.",
+    "eligibility": [
+      "Eligible industry/investment stakeholders; not a general household subsidy."
+    ],
+    "requirements": [
+      "Investment and program criteria must be verified from the Energy Department."
+    ],
+    "application_process": "Follow official Energy Department announcements.",
+    "official_url": "https://energy.punjab.gov.pk/",
+    "keywords": "solar panel manufacturing renewable energy industry investment",
+    "status": "Official Punjab initiative / scheme",
+    "last_verified": "September 2026",
+    "rules": {}
+  },
+  {
+    "name": "Zakat Rashan Card",
+    "category": "Social Welfare",
+    "description": "Monthly Zakat assistance for chronic poor and deserving adults in Punjab.",
+    "benefits": "Monthly cash assistance currently listed at PKR 2,000, subject to Zakat eligibility and verification.",
+    "eligibility": [
+      "Adult Muslim applicant living below poverty line and meeting Zakat eligibility; preference to vulnerable groups."
+    ],
+    "requirements": [
+      "Istehqaq is determined through the relevant Zakat committee/administrator."
+    ],
+    "application_process": "Apply to the Local Zakat & Ushr Committee/administrator of the area of residence.",
+    "official_url": "https://zakat.punjab.gov.pk/node/139",
+    "keywords": "poor rashan food zakat monthly assistance financial support",
+    "status": "Official Punjab initiative / scheme",
+    "last_verified": "September 2026",
+    "rules": {}
+  },
+  {
+    "name": "Guzara Allowance",
+    "category": "Social Welfare",
+    "description": "Zakat subsistence support for chronic poor and deserving people.",
+    "benefits": "Monthly subsistence assistance for eligible mustahiq persons.",
+    "eligibility": [
+      "Deserving persons meeting current Zakat istehqaq requirements."
+    ],
+    "requirements": [
+      "Eligibility is determined by the relevant Zakat authority."
+    ],
+    "application_process": "Apply through the local Zakat & Ushr administrative process.",
+    "official_url": "https://zakat.punjab.gov.pk/rules-regulations",
+    "keywords": "poor financial assistance guzara allowance zakat subsistence",
+    "status": "Official Punjab initiative / scheme",
+    "last_verified": "September 2026",
+    "rules": {}
+  },
+  {
+    "name": "CM Punjab Himmat Card",
+    "category": "Social Welfare",
+    "description": "Financial support package for persons with disabilities who meet the program conditions.",
+    "benefits": "Quarterly stipend currently listed at Rs.10,500 plus access to announced support services.",
+    "eligibility": [
+      "PWD certified by Social Welfare Punjab; not fit to work; other program conditions including PMT threshold apply."
+    ],
+    "requirements": [
+      "Disability certification, employment status, PMT and other assistance checks are required."
+    ],
+    "application_process": "Register/update PWD information and follow Himmat Card verification/application instructions.",
+    "official_url": "https://swd.punjab.gov.pk/himmatcard",
+    "keywords": "PWD disability himmat card stipend financial assistance social welfare",
+    "status": "Official Punjab initiative / scheme",
+    "last_verified": "September 2026",
+    "rules": {}
+  },
+  {
+    "name": "CM Punjab Dhee Rani Programme",
+    "category": "Social Welfare",
+    "description": "Punjab social welfare initiative supporting underprivileged families through collective marriages and related assistance.",
+    "benefits": "Marriage support including household items and financial assistance for selected couples.",
+    "eligibility": [
+      "Eligible underprivileged families/couples meeting the program criteria."
+    ],
+    "requirements": [
+      "Selection and verification criteria apply; check current application window."
+    ],
+    "application_process": "Apply through the official Social Welfare Department program process.",
+    "official_url": "https://swd.punjab.gov.pk/dgsw_drplc_high",
+    "keywords": "marriage assistance dheet rani collective marriage poor family welfare",
+    "status": "Official Punjab initiative / scheme",
+    "last_verified": "September 2026",
+    "rules": {}
+  },
+  {
+    "name": "CM Punjab Livestock Card",
+    "category": "Livestock",
+    "description": "Interest-free credit facility supporting livestock farmers with animal feed and fattening inputs.",
+    "benefits": "Interest-free loans for Wanda, silage and mineral mixtures; official portal lists loans of PKR 135,000–270,000.",
+    "eligibility": [
+      "Punjab livestock farmers meeting the current Livestock Card conditions, including livestock holdings and registration."
+    ],
+    "requirements": [
+      "CNIC/mobile, registration and animal/credit requirements must be verified."
+    ],
+    "application_process": "Use the official Livestock Card registration/application instructions.",
+    "official_url": "https://punjab.gov.pk/cm-punjab-livestock-card",
+    "keywords": "livestock farmer cattle buffalo calf feed wanda silage loan livestock card",
+    "status": "Official Punjab initiative / scheme",
+    "last_verified": "September 2026",
+    "rules": {
+      "farmer_required": true
+    }
+  },
+  {
+    "name": "CM Livestock Asset Transfer to Rural Women Scheme",
+    "category": "Livestock",
+    "description": "Livestock asset transfer initiative supporting rural women in South Punjab with livestock assets for livelihood generation.",
+    "benefits": "Eligible successful applicants can receive livestock assets such as heifers.",
+    "eligibility": [
+      "Widowed or divorced rural women in South Punjab, subject to age and other scheme conditions."
+    ],
+    "requirements": [
+      "Residence, age, prior government livestock assistance and CNIC/mobile requirements apply."
+    ],
+    "application_process": "Register through the official livestock asset transfer process and undergo verification.",
+    "official_url": "https://punjab.gov.pk/index.php/attrw-scheme",
+    "keywords": "livestock rural women cow buffalo heifer asset transfer south punjab livelihood",
+    "status": "Official Punjab initiative / scheme",
+    "last_verified": "September 2026",
+    "rules": {}
+  }
+]
