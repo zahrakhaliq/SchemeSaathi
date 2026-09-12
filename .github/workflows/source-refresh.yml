@@ -2,8 +2,13 @@ name: SchemeSaathi Source Refresh
 
 on:
   schedule:
-    - cron: "0 3 * * 1"
+    - cron: "0 3 * * 1" # Every Monday at 03:00 UTC
   workflow_dispatch:
+
+# Prevent two refresh runs from pushing to main at the same time.
+concurrency:
+  group: scheme-saathi-source-refresh
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -11,32 +16,69 @@ permissions:
 jobs:
   refresh-sources:
     runs-on: ubuntu-latest
-    concurrency:
-      group: scheme-saathi-source-refresh
-      cancel-in-progress: false
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
           python-version: "3.11"
+
       - name: Install maintenance dependencies
-        run: pip install requests
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
       - name: Run source maintenance agent
         env:
           TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
-        run: python update_agent.py
+        run: |
+          python update_agent.py
+
       - name: Commit verified source changes
         run: |
           git config user.name "SchemeSaathi Source Agent"
           git config user.email "actions@github.com"
+
           git add data/schemes.json data/source_refresh_report.json
+
           if git diff --cached --quiet; then
-            echo "No source changes to commit."
+            echo "No changes to commit."
             exit 0
           fi
+
           git commit -m "chore: refresh official scheme sources"
-          git fetch origin main
-          git rebase origin/main
-          git push origin HEAD:main
+
+          for i in 1 2 3 4 5; do
+            echo "Push attempt $i..."
+
+            # Get the latest remote main branch.
+            git fetch origin main
+
+            # Rebase our agent commit on top of the latest remote commit.
+            git rebase origin/main
+
+            # Push the rebased commit.
+            if git push origin HEAD:main; then
+              echo "Push successful."
+              exit 0
+            fi
+
+            echo "Push failed. Retrying in 3 seconds..."
+            sleep 3
+          done
+
+          echo "Push failed after 5 attempts."
+          exit 1
+
+      - name: Upload refresh report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scheme-saathi-source-refresh-report
+          path: data/source_refresh_report.json
+          if-no-files-found: ignore
