@@ -227,7 +227,8 @@
       "max_income": 300000,
       "income_required": true,
       "marks_required": true
-    }
+    },
+    "source_refresh_status": "Source unavailable; replacement not confidently found."
   },
   {
     "name": "CM Punjab Laptop Program",
@@ -297,7 +298,8 @@
     "keywords": "solar panel electricity bill energy free solar low consumption",
     "status": "Government flagship program; verify current intake",
     "last_verified": "September 2026",
-    "rules": {}
+    "rules": {},
+    "source_refresh_status": "Source unavailable; replacement not confidently found."
   },
   {
     "name": "Import Substitution & Export Enhancement: Sesame, Soybean and Canola",
@@ -717,7 +719,8 @@
     "last_verified": "September 2026",
     "rules": {
       "farmer_required": true
-    }
+    },
+    "source_refresh_status": "Source unavailable; replacement not confidently found."
   },
   {
     "name": "CM Livestock Asset Transfer to Rural Women Scheme",
@@ -735,6 +738,7 @@
     "keywords": "livestock rural women cow buffalo heifer asset transfer south punjab livelihood",
     "status": "Official Punjab initiative / scheme",
     "last_verified": "September 2026",
-    "rules": {}
+    "rules": {},
+    "source_refresh_status": "Source unavailable; replacement not confidently found."
   }
 ]

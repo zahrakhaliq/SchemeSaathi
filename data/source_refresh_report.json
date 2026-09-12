@@ -1,0 +1,37 @@
+{
+  "run_date": "2026-09-12",
+  "checked": 36,
+  "working": 32,
+  "repaired": 0,
+  "unresolved": 4,
+  "changes": [
+    {
+      "scheme": "Chief Minister Honhaar Scholarship Program",
+      "type": "unresolved",
+      "old_url": "https://punjab.gov.pk/node/6433",
+      "confidence": 0.0,
+      "reason": "No verified replacement found."
+    },
+    {
+      "scheme": "CM Punjab Free Solar Panel Scheme",
+      "type": "unresolved",
+      "old_url": "https://punjab.gov.pk/index.php/flagship-projects?page=2",
+      "confidence": 0.0,
+      "reason": "No verified replacement found."
+    },
+    {
+      "scheme": "CM Punjab Livestock Card",
+      "type": "unresolved",
+      "old_url": "https://punjab.gov.pk/cm-punjab-livestock-card",
+      "confidence": 0.0,
+      "reason": "No verified replacement found."
+    },
+    {
+      "scheme": "CM Livestock Asset Transfer to Rural Women Scheme",
+      "type": "unresolved",
+      "old_url": "https://punjab.gov.pk/index.php/attrw-scheme",
+      "confidence": 0.0,
+      "reason": "No verified replacement found."
+    }
+  ]
+}
