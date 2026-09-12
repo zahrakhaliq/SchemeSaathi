@@ -1,0 +1,38 @@
+name: SchemeSaathi Source Refresh
+
+on:
+  schedule:
+    - cron: "0 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-sources:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install maintenance dependencies
+        run: pip install requests
+
+      - name: Run source maintenance agent
+        env:
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+        run: python update_agent.py
+
+      - name: Commit verified source changes
+        run: |
+          git config user.name "SchemeSaathi Source Agent"
+          git config user.email "actions@github.com"
+          git add data/schemes.json data/source_refresh_report.json
+          git diff --cached --quiet || git commit -m "chore: refresh official scheme sources"
+          git push
