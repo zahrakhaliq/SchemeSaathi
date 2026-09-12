@@ -218,7 +218,7 @@
       "Check the latest official program announcement before applying."
     ],
     "application_process": "Apply through the official Honhaar Scholarship portal linked from the Punjab Portal.",
-    "official_url": "https://punjab.gov.pk/node/6433",
+    "official_url": "https://hed.punjab.gov.pk/node/1674",
     "keywords": "student scholarship university tuition education honhaar financial help",
     "status": "Government program; verify current intake",
     "last_verified": "September 2026",
@@ -228,7 +228,7 @@
       "income_required": true,
       "marks_required": true
     },
-    "source_refresh_status": "Source unavailable; replacement not confidently found."
+    "source_refresh_status": "Official source selected from Punjab government department/portal."
   },
   {
     "name": "CM Punjab Laptop Program",
@@ -294,12 +294,12 @@
       "Electricity consumer information and program-specific criteria apply."
     ],
     "application_process": "Check the official Punjab Portal and relevant energy department instructions.",
-    "official_url": "https://punjab.gov.pk/index.php/flagship-projects?page=2",
+    "official_url": "https://energy.punjab.gov.pk/node/165",
     "keywords": "solar panel electricity bill energy free solar low consumption",
     "status": "Government flagship program; verify current intake",
     "last_verified": "September 2026",
     "rules": {},
-    "source_refresh_status": "Source unavailable; replacement not confidently found."
+    "source_refresh_status": "Official source selected from Punjab government department/portal."
   },
   {
     "name": "Import Substitution & Export Enhancement: Sesame, Soybean and Canola",
@@ -720,7 +720,7 @@
     "rules": {
       "farmer_required": true
     },
-    "source_refresh_status": "Source unavailable; replacement not confidently found."
+    "source_refresh_status": "Official source selected from Punjab government department/portal."
   },
   {
     "name": "CM Livestock Asset Transfer to Rural Women Scheme",
@@ -734,11 +734,11 @@
       "Residence, age, prior government livestock assistance and CNIC/mobile requirements apply."
     ],
     "application_process": "Register through the official livestock asset transfer process and undergo verification.",
-    "official_url": "https://punjab.gov.pk/index.php/attrw-scheme",
+    "official_url": "https://www.punjab.gov.pk/attrw-scheme",
     "keywords": "livestock rural women cow buffalo heifer asset transfer south punjab livelihood",
     "status": "Official Punjab initiative / scheme",
     "last_verified": "September 2026",
     "rules": {},
-    "source_refresh_status": "Source unavailable; replacement not confidently found."
+    "source_refresh_status": "Official source selected from Punjab government department/portal."
   }
 ]
