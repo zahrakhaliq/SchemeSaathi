@@ -752,7 +752,7 @@
     "rules": {
       "farmer_required": true
     },
-    "source_refresh_status": "Source could not be verified; existing URL retained."
+    "source_refresh_status": "Verified via official search evidence; direct HTTP unavailable."
   },
   {
     "name": "CM Livestock Asset Transfer to Rural Women Scheme",
@@ -771,6 +771,6 @@
     "status": "Official Punjab initiative / scheme",
     "last_verified": "September 2026",
     "rules": {},
-    "source_refresh_status": "Source could not be verified; existing URL retained."
+    "source_refresh_status": "Verified via official search evidence; direct HTTP unavailable."
   }
 ]
