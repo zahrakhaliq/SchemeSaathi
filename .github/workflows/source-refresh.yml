@@ -11,6 +11,9 @@ permissions:
 jobs:
   refresh-sources:
     runs-on: ubuntu-latest
+    concurrency:
+      group: scheme-saathi-source-refresh
+      cancel-in-progress: false
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -29,5 +32,11 @@ jobs:
           git config user.name "SchemeSaathi Source Agent"
           git config user.email "actions@github.com"
           git add data/schemes.json data/source_refresh_report.json
-          git diff --cached --quiet || git commit -m "chore: refresh official scheme sources"
-          git push
+          if git diff --cached --quiet; then
+            echo "No source changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: refresh official scheme sources"
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
