@@ -18,8 +18,7 @@
     "last_verified": "September 2026",
     "rules": {
       "farmer_required": true
-    },
-    "source_refresh_status": "Verified by direct HTTP."
+    }
   },
   {
     "name": "Chief Minister Punjab Green Tractor Program (Low Power) Phase-IV",
@@ -40,8 +39,7 @@
     "last_verified": "September 2026",
     "rules": {
       "farmer_required": true
-    },
-    "source_refresh_status": "Verified by direct HTTP."
+    }
   },
   {
     "name": "Chief Minister Punjab Green Tractor Program (Hi Power) Phase-V",
@@ -62,8 +60,7 @@
     "last_verified": "September 2026",
     "rules": {
       "farmer_required": true
-    },
-    "source_refresh_status": "Verified by direct HTTP."
+    }
   },
   {
     "name": "Work for Punjab: Internship Scheme for Agriculture Graduates (Phase-II)",
@@ -84,8 +81,7 @@
     "last_verified": "September 2026",
     "rules": {
       "student_required": false
-    },
-    "source_refresh_status": "Verified by direct HTTP."
+    }
   },
   {
     "name": "Punjab Climate Resilient and Low Carbon Agriculture Mechanization Project (P-CLAMP)",
@@ -106,8 +102,7 @@
     "last_verified": "September 2026",
     "rules": {
       "farmer_required": true
-    },
-    "source_refresh_status": "Verified by direct HTTP."
+    }
   },
   {
     "name": "Groundwater Recharging Through Borehole Systems in Agricultural Fields",
@@ -128,8 +123,7 @@
     "last_verified": "September 2026",
     "rules": {
       "farmer_required": true
-    },
-    "source_refresh_status": "Verified by direct HTTP."
+    }
   },
   {
     "name": "High Efficiency Irrigation Systems (HEIS) Subsidy",
@@ -150,8 +144,7 @@
     "last_verified": "September 2026",
     "rules": {
       "farmer_required": true
-    },
-    "source_refresh_status": "Verified by direct HTTP."
+    }
   },
   {
     "name": "CM Punjab Asaan Karobar Card",
@@ -178,8 +171,7 @@
       "min_age": 21,
       "max_age": 57,
       "business_required": true
-    },
-    "source_refresh_status": "Verified by direct HTTP."
+    }
   },
   {
     "name": "CM Punjab Asaan Karobar Finance",
@@ -207,8 +199,7 @@
       "min_age": 25,
       "max_age": 55,
       "business_required": true
-    },
-    "source_refresh_status": "Verified by direct HTTP."
+    }
   },
   {
     "name": "Chief Minister Honhaar Scholarship Program",
@@ -237,7 +228,7 @@
       "income_required": true,
       "marks_required": true
     },
-    "source_refresh_status": "Verified by direct HTTP."
+    "source_refresh_status": "Official source selected from Punjab government department/portal."
   },
   {
     "name": "CM Punjab Laptop Program",
@@ -267,8 +258,7 @@
       "student_required": true,
       "min_marks": 65,
       "marks_required": true
-    },
-    "source_refresh_status": "Verified by direct HTTP."
+    }
   },
   {
     "name": "Zakat Educational Stipend (General)",
@@ -289,8 +279,7 @@
     "last_verified": "September 2026",
     "rules": {
       "student_required": true
-    },
-    "source_refresh_status": "Verified by direct HTTP."
+    }
   },
   {
     "name": "CM Punjab Free Solar Panel Scheme",
@@ -310,7 +299,7 @@
     "status": "Government flagship program; verify current intake",
     "last_verified": "September 2026",
     "rules": {},
-    "source_refresh_status": "Verified by direct HTTP."
+    "source_refresh_status": "Official source selected from Punjab government department/portal."
   },
   {
     "name": "Import Substitution & Export Enhancement: Sesame, Soybean and Canola",
@@ -330,8 +319,7 @@
     "last_verified": "September 2026",
     "rules": {
       "farmer_required": true
-    },
-    "source_refresh_status": "Verified by direct HTTP."
+    }
   },
   {
     "name": "CM Punjab Program for Water Efficient Agriculture",
@@ -351,8 +339,7 @@
     "last_verified": "September 2026",
     "rules": {
       "farmer_required": true
-    },
-    "source_refresh_status": "Verified by direct HTTP."
+    }
   },
   {
     "name": "CM Punjab Hi-Tech Farm Mechanization Financing Program",
@@ -372,8 +359,7 @@
     "last_verified": "September 2026",
     "rules": {
       "farmer_required": true
-    },
-    "source_refresh_status": "Verified by direct HTTP."
+    }
   },
   {
     "name": "CM Punjab Water Conservation & Livelihood Project in Barani Tract",
@@ -393,8 +379,7 @@
     "last_verified": "September 2026",
     "rules": {
       "farmer_required": true
-    },
-    "source_refresh_status": "Verified by direct HTTP."
+    }
   },
   {
     "name": "Establishment of Model Agriculture Malls in Punjab",
@@ -414,8 +399,7 @@
     "last_verified": "September 2026",
     "rules": {
       "farmer_required": true
-    },
-    "source_refresh_status": "Verified by direct HTTP."
+    }
   },
   {
     "name": "Punjab Resilient and Inclusive Agriculture Transformation (PRIAT)",
@@ -435,8 +419,7 @@
     "last_verified": "September 2026",
     "rules": {
       "farmer_required": true
-    },
-    "source_refresh_status": "Verified by direct HTTP."
+    }
   },
   {
     "name": "Punjab Clean Air Program: Super Seeder Subsidy",
@@ -456,8 +439,7 @@
     "last_verified": "September 2026",
     "rules": {
       "farmer_required": true
-    },
-    "source_refresh_status": "Verified by direct HTTP."
+    }
   },
   {
     "name": "Punjab Rozgar Scheme (PRS)",
@@ -475,8 +457,7 @@
     "keywords": "business loan entrepreneurship SME youth startup small enterprise financing",
     "status": "Official Punjab initiative / scheme",
     "last_verified": "September 2026",
-    "rules": {},
-    "source_refresh_status": "Verified by direct HTTP."
+    "rules": {}
   },
   {
     "name": "Interest-Free Financial Support for Artisans of Punjab",
@@ -494,8 +475,7 @@
     "keywords": "artisan cottage industry business loan interest free handicraft self employment",
     "status": "Official Punjab initiative / scheme",
     "last_verified": "September 2026",
-    "rules": {},
-    "source_refresh_status": "Verified by direct HTTP."
+    "rules": {}
   },
   {
     "name": "Interest-Free Loan Scheme for Graduated Incubates of WBICs",
@@ -513,8 +493,7 @@
     "keywords": "women entrepreneur incubator business loan startup financing WBIC",
     "status": "Official Punjab initiative / scheme",
     "last_verified": "September 2026",
-    "rules": {},
-    "source_refresh_status": "Verified by direct HTTP."
+    "rules": {}
   },
   {
     "name": "Women Business Incubation Centers (WBIC)",
@@ -532,8 +511,7 @@
     "keywords": "women business incubation entrepreneurship startup mentoring women",
     "status": "Official Punjab initiative / scheme",
     "last_verified": "September 2026",
-    "rules": {},
-    "source_refresh_status": "Verified by direct HTTP."
+    "rules": {}
   },
   {
     "name": "Rahmatul-lil-Alameen Scholarship",
@@ -553,8 +531,7 @@
     "last_verified": "September 2026",
     "rules": {
       "student_required": true
-    },
-    "source_refresh_status": "Verified by direct HTTP."
+    }
   },
   {
     "name": "Punjab Education Endowment Fund (PEEF) Scholarships",
@@ -574,8 +551,7 @@
     "last_verified": "September 2026",
     "rules": {
       "student_required": true
-    },
-    "source_refresh_status": "Verified by direct HTTP."
+    }
   },
   {
     "name": "Free MDCAT/ECAT Preparatory Classes",
@@ -595,8 +571,7 @@
     "last_verified": "September 2026",
     "rules": {
       "student_required": true
-    },
-    "source_refresh_status": "Verified by direct HTTP."
+    }
   },
   {
     "name": "Chief Minister Transport Programme for Female Colleges",
@@ -616,8 +591,7 @@
     "last_verified": "September 2026",
     "rules": {
       "student_required": true
-    },
-    "source_refresh_status": "Verified by direct HTTP."
+    }
   },
   {
     "name": "CM Initiative for Promotion of Renewable Energy Technologies",
@@ -635,8 +609,7 @@
     "keywords": "solar renewable energy clean energy household technology",
     "status": "Official Punjab initiative / scheme",
     "last_verified": "September 2026",
-    "rules": {},
-    "source_refresh_status": "Verified by direct HTTP."
+    "rules": {}
   },
   {
     "name": "CM Fund for Indigenization of Solar Panel Production",
@@ -654,8 +627,7 @@
     "keywords": "solar panel manufacturing renewable energy industry investment",
     "status": "Official Punjab initiative / scheme",
     "last_verified": "September 2026",
-    "rules": {},
-    "source_refresh_status": "Verified by direct HTTP."
+    "rules": {}
   },
   {
     "name": "Zakat Rashan Card",
@@ -673,8 +645,7 @@
     "keywords": "poor rashan food zakat monthly assistance financial support",
     "status": "Official Punjab initiative / scheme",
     "last_verified": "September 2026",
-    "rules": {},
-    "source_refresh_status": "Verified by direct HTTP."
+    "rules": {}
   },
   {
     "name": "Guzara Allowance",
@@ -692,8 +663,7 @@
     "keywords": "poor financial assistance guzara allowance zakat subsistence",
     "status": "Official Punjab initiative / scheme",
     "last_verified": "September 2026",
-    "rules": {},
-    "source_refresh_status": "Verified by direct HTTP."
+    "rules": {}
   },
   {
     "name": "CM Punjab Himmat Card",
@@ -711,8 +681,7 @@
     "keywords": "PWD disability himmat card stipend financial assistance social welfare",
     "status": "Official Punjab initiative / scheme",
     "last_verified": "September 2026",
-    "rules": {},
-    "source_refresh_status": "Verified by direct HTTP."
+    "rules": {}
   },
   {
     "name": "CM Punjab Dhee Rani Programme",
@@ -730,8 +699,7 @@
     "keywords": "marriage assistance dheet rani collective marriage poor family welfare",
     "status": "Official Punjab initiative / scheme",
     "last_verified": "September 2026",
-    "rules": {},
-    "source_refresh_status": "Verified by direct HTTP."
+    "rules": {}
   },
   {
     "name": "CM Punjab Livestock Card",
@@ -752,7 +720,7 @@
     "rules": {
       "farmer_required": true
     },
-    "source_refresh_status": "Source could not be verified; existing URL retained."
+    "source_refresh_status": "Official source selected from Punjab government department/portal."
   },
   {
     "name": "CM Livestock Asset Transfer to Rural Women Scheme",
@@ -771,6 +739,6 @@
     "status": "Official Punjab initiative / scheme",
     "last_verified": "September 2026",
     "rules": {},
-    "source_refresh_status": "Source could not be verified; existing URL retained."
+    "source_refresh_status": "Official source selected from Punjab government department/portal."
   }
 ]
