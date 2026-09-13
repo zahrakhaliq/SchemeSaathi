@@ -13,7 +13,7 @@ from llm import explain_results
 load_dotenv()
 
 st.set_page_config(
-    page_title="SchemeSaathi - Punjab Government Scheme Finder",
+    page_title="SchemeSaathi - AI-Powered Government Scheme Discovery",
     page_icon="🇵🇰",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -82,99 +82,108 @@ def valid_need_query(text):
 
 
 # ============================================================
-# VISUAL THEME
+# VISUAL THEME (SLIDE-DECK MATCHED PALETTE)
 # ============================================================
 
 st.markdown("""
 <style>
 
+:root {
+    --bg-dark: #0d2818;
+    --card-bg-dark: #133822;
+    --accent-gold: #e5a93c;
+    --accent-emerald: #2e7d56;
+    --text-gold: #f3be55;
+    --text-main: #172033;
+    --text-muted: #596780;
+}
+
 .stApp {
-    background: linear-gradient(
-        180deg,
-        #f7fbf8 0%,
-        #ffffff 45%,
-        #f8f7ff 100%
-    );
+    background: #f4f6f5;
 }
 
 /* ---------- BRANDING / LOGO HEADER ---------- */
 
+.brand-banner {
+    background: linear-gradient(135deg, #0d2818 0%, #174229 100%);
+    padding: 32px 36px;
+    border-radius: 20px;
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(13, 40, 24, 0.25);
+    margin-bottom: 24px;
+    border: 1px solid rgba(229, 169, 60, 0.2);
+}
+
 .brand-header {
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 12px 0 20px 0;
-    margin-bottom: 8px;
+    gap: 18px;
 }
 
 .brand-logo {
-    width: 52px;
-    height: 52px;
-    border-radius: 14px;
-    background: linear-gradient(135deg, #075e54 0%, #087f6d 100%);
-    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    background: #e5a93c;
+    color: #0d2818;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.6rem;
-    font-weight: 800;
-    box-shadow: 0 6px 16px rgba(7, 94, 84, 0.25);
-    border: 2px solid #ffffff;
-    position: relative;
-}
-
-.brand-logo::after {
-    content: "•";
-    position: absolute;
-    top: 4px;
-    right: 6px;
-    font-size: 0.8rem;
-    color: #ffd700;
+    font-size: 2rem;
+    font-weight: 900;
+    box-shadow: 0 4px 15px rgba(229, 169, 60, 0.4);
 }
 
 .brand-title-group h1 {
     margin: 0;
-    font-size: 1.85rem;
+    font-size: 2.4rem;
     font-weight: 800;
-    color: #172033;
+    color: #ffffff;
     line-height: 1.1;
+    letter-spacing: -0.5px;
+}
+
+.brand-title-group h1 span.highlight {
+    color: #e5a93c;
 }
 
 .brand-title-group .sub-heading {
-    margin: 3px 0 0 0;
-    color: #075e54;
-    font-size: 0.95rem;
+    margin: 6px 0 0 0;
+    color: #e5a93c;
+    font-size: 0.82rem;
     font-weight: 700;
-    letter-spacing: 0.3px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
 
 .brand-tagline {
-    margin-top: 4px;
-    color: #667085;
-    font-size: 0.92rem;
+    margin-top: 10px;
+    color: #d1dfd7;
+    font-size: 1.02rem;
+    font-weight: 400;
 }
 
-/* ---------- PROFILE ---------- */
+/* ---------- PROFILE BOX ---------- */
 
 .profile-box {
     background: #ffffff;
-    border: 1px solid #e3e7ee;
-    border-radius: 20px;
-    padding: 20px 22px;
-    margin: 8px 0 18px 0;
-    box-shadow: 0 7px 22px rgba(31, 41, 55, .06);
+    border: 1px solid #dce4e0;
+    border-radius: 18px;
+    padding: 22px 24px;
+    margin: 8px 0 20px 0;
+    box-shadow: 0 4px 18px rgba(13, 40, 24, 0.04);
 }
 
 .profile-title {
-    font-size: 1.05rem;
-    font-weight: 750;
-    color: #172033;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #0d2818;
     margin-bottom: 4px;
 }
 
 .profile-subtitle {
-    color: #667085;
-    font-size: .88rem;
+    color: #596780;
+    font-size: .9rem;
     margin-bottom: 14px;
 }
 
@@ -183,50 +192,51 @@ st.markdown("""
 .profile-pill {
     display: inline-flex;
     align-items: center;
-    gap: 9px;
-    padding: 9px 16px;
-    border: 1.5px solid #d8dee8;
+    gap: 10px;
+    padding: 8px 18px;
+    border: 1.5px solid #e5a93c;
     border-radius: 999px;
-    background: #f9fafb;
-    color: #172033;
-    font-weight: 650;
-    font-size: .9rem;
-    margin-top: 4px;
+    background: #fdfbf7;
+    color: #0d2818;
+    font-weight: 700;
+    font-size: .92rem;
+    margin-top: 8px;
 }
 
 .profile-pill-icon {
-    width: 27px;
-    height: 27px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: #e7f5f0;
+    background: #e5a93c;
+    color: #0d2818;
 }
 
 /* ---------- SECTION TITLES ---------- */
 
 .section-label {
     font-size: 1.45rem;
-    font-weight: 750;
-    color: #172033;
-    margin: 22px 0 8px;
+    font-weight: 800;
+    color: #0d2818;
+    margin: 26px 0 12px;
 }
 
 /* ---------- NEED BOX ---------- */
 
 .need-header {
-    padding: 12px 0 8px 0;
+    padding: 10px 0 6px 0;
 }
 
 .need-title {
-    font-size: 1.4rem;
+    font-size: 1.45rem;
     font-weight: 800;
-    color: #172033;
+    color: #0d2818;
 }
 
 .need-subtitle {
-    color: #667085;
+    color: #596780;
     font-size: .92rem;
     margin-top: 3px;
 }
@@ -234,42 +244,46 @@ st.markdown("""
 /* ---------- FIELD CARDS ---------- */
 
 .field-card {
-    border: 1px solid #e1e5ec;
+    border: 1.5px solid #dce4e0;
     border-radius: 16px;
-    padding: 15px 15px 12px;
+    padding: 16px;
     background: #ffffff;
-    min-height: 112px;
+    min-height: 110px;
     margin-bottom: 8px;
-    box-shadow: 0 3px 10px rgba(23,32,51,.05);
+    transition: all 0.2s ease;
+    box-shadow: 0 3px 10px rgba(13, 40, 24, 0.03);
 }
 
 .field-card-title {
-    font-weight: 750;
-    color: #172033;
-    font-size: 1rem;
-    margin-bottom: 5px;
+    font-weight: 800;
+    color: #0d2818;
+    font-size: 1.02rem;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .field-card-text {
-    color: #667085;
-    font-size: .79rem;
-    line-height: 1.35;
+    color: #596780;
+    font-size: .82rem;
+    line-height: 1.4;
 }
 
 .field-selected {
-    border: 2px solid #ff5a5f;
-    background: #fff7f7;
-    box-shadow: 0 5px 16px rgba(255,90,95,.10);
+    border: 2px solid #e5a93c;
+    background: #fdfbf7;
+    box-shadow: 0 6px 18px rgba(229, 169, 60, 0.15);
 }
 
 /* ---------- SCHEME CARDS ---------- */
 
 .scheme-card {
-    border: 1px solid #e6e8ef;
-    border-radius: 20px;
-    padding: 21px 22px;
+    border: 1px solid #dce4e0;
+    border-radius: 18px;
+    padding: 22px;
     background: #ffffff;
-    box-shadow: 0 9px 25px rgba(31, 41, 55, .07);
+    box-shadow: 0 6px 20px rgba(13, 40, 24, 0.05);
     margin-bottom: 18px;
     min-height: 350px;
 }
@@ -282,181 +296,149 @@ st.markdown("""
 }
 
 .scheme-name {
-    font-size: 1.12rem;
-    font-weight: 750;
+    font-size: 1.2rem;
+    font-weight: 800;
     line-height: 1.3;
-    color: #172033;
+    color: #0d2818;
 }
 
 .badge {
     display: inline-block;
-    padding: 5px 10px;
+    padding: 5px 12px;
     border-radius: 999px;
-    font-size: .75rem;
-    font-weight: 700;
+    font-size: .78rem;
+    font-weight: 800;
     white-space: nowrap;
 }
 
-.education { background:#eee9ff; color:#5a3eb7; }
-.agriculture { background:#e4f7eb; color:#177245; }
-.business { background:#fff0dc; color:#a45a00; }
-.energy { background:#fff8cf; color:#806500; }
-.youth { background:#e5f3ff; color:#17649a; }
-.social { background:#ffe7ee; color:#a33c5a; }
-.neutral { background:#eef1f5; color:#556070; }
+.education { background:#fff5e5; color:#b37b14; }
+.agriculture { background:#e8f5e9; color:#1b5e20; }
+.business { background:#e0f2f1; color:#004d40; }
+.energy { background:#fffde7; color:#f57f17; }
+.youth { background:#e1f5fe; color:#01579b; }
+.social { background:#f3e5f5; color:#4a148c; }
+.neutral { background:#eceff1; color:#37474f; }
 
 .scheme-desc {
-    color:#4b5565;
-    margin:13px 0 16px;
-    line-height:1.55;
+    color: #37474f;
+    margin: 14px 0 16px;
+    line-height: 1.55;
+    font-size: 0.95rem;
 }
 
 .scheme-section-title {
-    font-weight:700;
-    color:#273142;
-    margin-bottom:5px;
+    font-weight: 800;
+    color: #0d2818;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .scheme-body {
-    color:#596273;
-    font-size:.9rem;
-    line-height:1.5;
+    color: #455a64;
+    font-size: .92rem;
+    line-height: 1.5;
 }
 
 .why {
-    padding:10px 12px;
-    background:#f7f8fb;
-    border-radius:12px;
-    color:#4b5563;
-    font-size:.88rem;
-    margin-top:12px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    font-size: .88rem;
+    margin-top: 14px;
 }
 
 .status-likely {
-    background:#e9f8ef;
-    border-left:4px solid #2e9d63;
+    background: #e8f5e9;
+    border-left: 4px solid #2e7d56;
+    color: #1b5e20;
 }
 
 .status-verify {
-    background:#fff7df;
-    border-left:4px solid #d59b24;
+    background: #fff8e1;
+    border-left: 4px solid #e5a93c;
+    color: #8c6311;
 }
 
 .status-no {
-    background:#fff0f0;
-    border-left:4px solid #d95353;
+    background: #ffebee;
+    border-left: 4px solid #c62828;
+    color: #b71c1c;
 }
 
 .official-link {
-    display:inline-block;
-    margin-top:15px;
-    padding:9px 14px;
-    border-radius:10px;
-    background:#075e54;
-    color:white !important;
-    text-decoration:none !important;
-    font-weight:700;
-    font-size:.86rem;
+    display: inline-block;
+    margin-top: 16px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    background: #0d2818;
+    color: #e5a93c !important;
+    text-decoration: none !important;
+    font-weight: 800;
+    font-size: .88rem;
+    transition: background 0.2s;
 }
 
-/* ---------- INPUTS ---------- */
+.official-link:hover {
+    background: #174229;
+}
+
+/* ---------- FORM CONTROLS & OVERRIDES ---------- */
 
 .stTextInput input,
 .stTextArea textarea,
-div[data-baseweb="select"] > div,
-div[data-baseweb="select"] input {
-    color: #172033 !important;
-    -webkit-text-fill-color: #172033 !important;
+div[data-baseweb="select"] > div {
+    color: #0d2818 !important;
     background-color: #ffffff !important;
-    border-color: #d9dee8 !important;
-    color-scheme: light !important;
+    border: 1.5px solid #dce4e0 !important;
+    border-radius: 12px !important;
 }
 
-.stTextInput input::placeholder,
-.stTextArea textarea::placeholder {
-    color: #7b8494 !important;
-    -webkit-text-fill-color: #7b8494 !important;
-    opacity: 1 !important;
+.stTextInput input:focus,
+.stTextArea textarea:focus,
+div[data-baseweb="select"] > div:focus {
+    border-color: #2e7d56 !important;
+}
+
+div[data-testid="stTextArea"] textarea {
+    font-size: 1rem !important;
+    padding: 16px !important;
+    border-radius: 14px !important;
 }
 
 [data-testid="stWidgetLabel"] * {
-    color: #344054 !important;
-}
-
-/* ---------- TEXT AREA HERO STYLE ---------- */
-
-div[data-testid="stTextArea"] textarea {
-    border: 2px solid #d9dee8 !important;
-    border-radius: 16px !important;
-    padding: 16px !important;
-    font-size: 1rem !important;
-    min-height: 135px !important;
-    box-shadow: 0 5px 18px rgba(31,41,55,.05) !important;
-}
-
-div[data-testid="stTextArea"] textarea:focus {
-    border-color: #087f6d !important;
-    box-shadow: 0 0 0 2px rgba(8,127,109,.10) !important;
+    color: #0d2818 !important;
+    font-weight: 700 !important;
 }
 
 /* ---------- BUTTONS ---------- */
 
 div.stButton > button {
     border-radius: 12px !important;
-    font-weight: 700 !important;
+    font-weight: 800 !important;
     background: #ffffff !important;
-    color: #172033 !important;
-    -webkit-text-fill-color: #172033 !important;
-    border: 1px solid #d9dee8 !important;
-    box-shadow: 0 2px 8px rgba(31, 41, 55, .05) !important;
+    color: #0d2818 !important;
+    border: 1.5px solid #dce4e0 !important;
+    padding: 10px 20px !important;
 }
 
 div.stButton > button:hover {
-    background: #f7f9fc !important;
-    color: #172033 !important;
+    border-color: #e5a93c !important;
+    color: #e5a93c !important;
 }
 
 div.stButton > button[kind="primary"] {
-    background: linear-gradient(
-        135deg,
-        #ff5a5f,
-        #ff4b55
-    ) !important;
-    color: #ffffff !important;
-    -webkit-text-fill-color: #ffffff !important;
+    background: linear-gradient(135deg, #e5a93c 0%, #d4972c 100%) !important;
+    color: #0d2818 !important;
     border: none !important;
-    box-shadow: 0 7px 18px rgba(255,90,95,.20) !important;
+    box-shadow: 0 6px 16px rgba(229, 169, 60, 0.3) !important;
 }
 
 div.stButton > button[kind="primary"] * {
-    color: #ffffff !important;
+    color: #0d2818 !important;
 }
 
-/* ---------- FORCE LIGHT UI ---------- */
-
-:root, html, body {
-    color-scheme: light !important;
-}
-
-html, body, .stApp, [data-testid="stAppViewContainer"], [data-testid="stMainViewContainer"], [data-testid="stMain"], [data-testid="stHeader"] {
-    background-color: #ffffff !important;
-    color: #172033 !important;
-}
-
-[data-testid="stAppViewContainer"] {
-    background: linear-gradient(
-        180deg,
-        #f7fbf8 0%,
-        #ffffff 45%,
-        #f8f7ff 100%
-    ) !important;
-}
-
-[data-testid="stHeader"] {
-    background: #ffffff !important;
-    border-bottom: 1px solid #eef0f4 !important;
-}
-
+/* Hide Streamlit Sidebar */
 [data-testid="stSidebar"] {
     display: none !important;
 }
@@ -478,16 +460,18 @@ retriever = get_retriever()
 
 
 # ============================================================
-# LOGO / BRANDING HEADER
+# BRANDING HEADER (MATCHING PRESENTATION BANNER)
 # ============================================================
 
 st.markdown("""
-<div class="brand-header">
-    <div class="brand-logo">S</div>
-    <div class="brand-title-group">
-        <h1>SchemeSaathi</h1>
-        <div class="sub-heading">PUNJAB GOVERNMENT SCHEME FINDER</div>
-        <div class="brand-tagline">Find the government support you need in simple words.</div>
+<div class="brand-banner">
+    <div class="brand-header">
+        <div class="brand-logo">S</div>
+        <div class="brand-title-group">
+            <div class="sub-heading">AI GOVERNMENT SCHEME ASSISTANT • PUNJAB</div>
+            <h1>Scheme<span class="highlight">Saathi</span></h1>
+            <div class="brand-tagline">Find the government support you need in your own words.</div>
+        </div>
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -501,7 +485,7 @@ st.markdown("""
 <div class="profile-box">
     <div class="profile-title">👤 Your Profile</div>
     <div class="profile-subtitle">
-        Add a few basic details so we can personalize your results and check eligibility criteria.
+        Provide basic details to evaluate preliminary scheme eligibility.
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -556,10 +540,10 @@ if profile_ready:
     st.markdown(
         f"""
         <div class="profile-pill">
-            <span class="profile-pill-icon">👤</span>
+            <span class="profile-pill-icon">✓</span>
             <span>
-                {int(age)} years&nbsp;&nbsp;·&nbsp;&nbsp;
-                {html.escape(district)}&nbsp;&nbsp;·&nbsp;&nbsp;
+                {int(age)} years old&nbsp;&nbsp;•&nbsp;&nbsp;
+                {html.escape(district)}&nbsp;&nbsp;•&nbsp;&nbsp;
                 {html.escape(occupation)}
             </span>
         </div>
@@ -567,7 +551,7 @@ if profile_ready:
         unsafe_allow_html=True,
     )
 else:
-    st.caption("Complete your profile above to personalize eligibility guidance.")
+    st.caption("Fill in your profile details above for personalized eligibility checks.")
 
 
 # ============================================================
@@ -578,28 +562,28 @@ st.markdown("""
 <div class="need-header">
     <div class="need-title">💬 What do you need help with?</div>
     <div class="need-subtitle">
-        Describe your situation in your own words. You don't need to know official terminology or specific scheme names.
+        Describe your request naturally. No technical or official government terms required.
     </div>
 </div>
 """, unsafe_allow_html=True)
 
 
 # ============================================================
-# CATEGORY SHORTCUTS
+# CATEGORY SHORTCUTS (MATCHING SLIDE ICONS & COLORS)
 # ============================================================
 
 field_options = [
-    (
-        "🎓",
-        "Education",
-        "Scholarships, fees, laptops & student support",
-        "Education",
-    ),
     (
         "🌾",
         "Agriculture",
         "Farming, tractors, Kissan Card & subsidies",
         "Agriculture",
+    ),
+    (
+        "🎓",
+        "Education",
+        "Scholarships, fees, laptops & student support",
+        "Education",
     ),
     (
         "💼",
@@ -632,7 +616,7 @@ if "selected_field" not in st.session_state:
     st.session_state.selected_field = None
 
 
-st.caption("Or choose a field (optional):")
+st.caption("Or select a category (optional):")
 
 for row_start in range(0, len(field_options), 3):
     cols = st.columns(3)
@@ -652,7 +636,7 @@ for row_start in range(0, len(field_options), 3):
                 f"""
                 <div class="{card_class}">
                     <div class="field-card-title">
-                        {icon} {title}
+                        <span>{icon}</span> <span>{title}</span>
                     </div>
                     <div class="field-card-text">
                         {desc}
@@ -677,11 +661,11 @@ selected_category = st.session_state.selected_field
 
 if selected_category:
     st.caption(
-        f"Selected field: **{selected_category}** · "
-        "You can still describe your need in your own words."
+        f"Filtered sector: **{selected_category}** · "
+        "You can still describe your request in detail below."
     )
 else:
-    st.caption("No field selected — AI will infer the field directly from your request.")
+    st.caption("No sector filter selected — AI will infer it from your text input.")
 
 
 # ============================================================
@@ -690,10 +674,9 @@ else:
 
 query = st.text_area(
     "What do you need?",
-    height=140,
+    height=130,
     placeholder=(
-        "Example: I need financial support for my farm...\n\n"
-        "Tell us your problem naturally."
+        "Example: I need financial support to purchase solar panels for my farm..."
     ),
     label_visibility="collapsed",
 )
@@ -703,18 +686,18 @@ query = st.text_area(
 # ACTION BUTTONS
 # ============================================================
 
-b1, b2 = st.columns([1.15, 1])
+b1, b2 = st.columns([1.2, 1])
 
 with b1:
     find = st.button(
-        "🔎 Find schemes for me",
+        "🔎 Find Schemes For Me",
         type="primary",
         use_container_width=True,
     )
 
 with b2:
     browse = st.button(
-        "📋 Browse all schemes",
+        "📋 Browse All Schemes",
         use_container_width=True,
     )
 
@@ -739,7 +722,7 @@ if find or browse:
 
         if missing:
             st.error(
-                "Please complete the required profile field(s): "
+                "Please complete the missing profile field(s): "
                 + ", ".join(missing)
                 + "."
             )
@@ -819,24 +802,23 @@ if find or browse:
     if not results:
         if find and is_service_query(query):
             st.info(
-                "This sounds like a Punjab government service request "
-                "rather than a financial/support scheme. You can use "
-                "Maryam Ki Dastak to find the relevant service."
+                "This request appears to be for a general civic service "
+                "rather than a support scheme. You can check Maryam Ki Dastak for official civic services."
             )
             st.markdown(
                 """
                 <a class="official-link"
                    href="https://dastak.punjab.gov.pk/citizen/services"
                    target="_blank">
-                   🔗 Open official Dastak services
+                   🔗 Open Official Dastak Portal
                 </a>
                 """,
                 unsafe_allow_html=True,
             )
         else:
             st.warning(
-                "No strong match was found in the current dataset. "
-                "Try describing your need in a little more detail."
+                "No matching schemes were found in our database. "
+                "Try clarifying or elaborating on your situation."
             )
 
     # ========================================================
@@ -844,7 +826,7 @@ if find or browse:
     # ========================================================
     else:
         st.markdown(
-            '<div class="section-label">🎯 Schemes that may help you</div>',
+            '<div class="section-label">🎯 Relevant Government Schemes</div>',
             unsafe_allow_html=True,
         )
 
@@ -858,13 +840,11 @@ if find or browse:
             )
             if inferred:
                 st.caption(
-                    f"We detected your main need as "
-                    f"**{inferred}** and prioritized relevant schemes."
+                    f"Identified core category as **{inferred}**."
                 )
 
         st.caption(
-            f"Showing {len(results)} result(s). "
-            "These are preliminary matches, not official eligibility decisions."
+            f"Displaying {len(results)} matching result(s)."
         )
 
         # Render Scheme Cards (2 per row)
@@ -900,9 +880,9 @@ if find or browse:
                 }[assessment["status"]]
 
                 status_text = {
-                    "likely": "🟢 Likely match",
-                    "needs_verification": "🟡 Verify requirements",
-                    "not_eligible": "🔴 Basic requirement mismatch",
+                    "likely": "🟢 Likely Match",
+                    "needs_verification": "🟡 Verify Eligibility",
+                    "not_eligible": "🔴 Basic Requirement Mismatch",
                 }[assessment["status"]]
 
                 name = html.escape(item["name"])
@@ -924,12 +904,12 @@ if find or browse:
 
                     <div class="scheme-desc">{desc}</div>
 
-                    <div class="scheme-section-title">What you get</div>
+                    <div class="scheme-section-title">Benefits</div>
                     <div class="scheme-body">{benefits}</div>
 
                     <div style="height:12px"></div>
 
-                    <div class="scheme-section-title">Who it is for</div>
+                    <div class="scheme-section-title">Eligibility Criteria</div>
                     <div class="scheme-body">{eligibility_text}</div>
 
                     <div class="why {status_class}">
@@ -938,7 +918,7 @@ if find or browse:
                     </div>
 
                     <a class="official-link" href="{url}" target="_blank">
-                        🔗 Official government source
+                        🔗 Official Government Link
                     </a>
                 </div>
                 """
@@ -951,13 +931,13 @@ if find or browse:
 # COMPACT FOOTER / HOW IT WORKS
 # ============================================================
 
-st.markdown("<br><hr style='border: 0; border-top: 1px solid #e3e7ee;'><br>", unsafe_allow_html=True)
+st.markdown("<br><hr style='border: 0; border-top: 1px solid #dce4e0;'><br>", unsafe_allow_html=True)
 
-with st.expander("ℹ️ How SchemeSaathi works"):
+with st.expander("ℹ️ How SchemeSaathi Works"):
     c1, c2, c3 = st.columns(3)
     with c1:
-        st.markdown("**1. Tell us your need**\nWrite naturally — no official keywords or code required.")
+        st.markdown("**1. Citizen Input**\nEnter your request naturally in simple terms.")
     with c2:
-        st.markdown("**2. We find matches**\nSemantic AI search checks the official scheme knowledge base.")
+        st.markdown("**2. RAG & Semantic Match**\nMatches query against verified government databases.")
     with c3:
-        st.markdown("**3. Verify & apply**\nCheck preliminary eligibility rules and proceed to official government portals.")
+        st.markdown("**3. Official Direct Access**\nReview basic requirements and visit direct official links.")
