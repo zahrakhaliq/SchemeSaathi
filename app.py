@@ -438,15 +438,28 @@ div[data-testid="stTextArea"] textarea::placeholder {
     opacity: 1 !important;
 }
 
-/* Expander Box */
+/* ---------- EXPANDER CUSTOM STYLING ---------- */
+
 .stExpander {
     background: #ffffff !important;
     border: 2px solid #d4dfd8 !important;
     border-radius: 14px !important;
+    overflow: hidden !important;
 }
 
-.stExpander summary * {
+.stExpander details summary,
+div[data-testid="stExpander"] details summary {
+    background-color: #ffffff !important;
     color: #0d2818 !important;
+    font-weight: 800 !important;
+    border-bottom: 1px solid #e0e8e3 !important;
+    padding: 12px 16px !important;
+}
+
+.stExpander details summary *,
+div[data-testid="stExpander"] details summary * {
+    color: #0d2818 !important;
+    fill: #0d2818 !important;
     font-weight: 800 !important;
 }
 
@@ -481,6 +494,22 @@ div.stButton > button[kind="primary"] * {
 
 div.stButton > button[kind="primary"]:hover {
     background: #d4972c !important;
+}
+
+/* ---------- FOOTER STYLING ---------- */
+
+.app-footer {
+    text-align: center;
+    padding: 24px 0 12px 0;
+    color: #617568;
+    font-size: 0.9rem;
+    font-weight: 600;
+
+}
+
+.app-footer a {
+    color: #0d2818;
+    text-decoration: underline;
 }
 
 /* Hide Sidebar */
@@ -979,3 +1008,10 @@ with st.expander("ℹ️ How SchemeSaathi Works"):
         st.markdown("**2. RAG & Semantic Match**\nMatches query against verified government databases.")
     with c3:
         st.markdown("**3. Official Direct Access**\nReview basic requirements and visit direct official links.")
+
+# Copyright Footer
+st.markdown("""
+<div class="app-footer">
+    © 2026 <strong>SchemeSaathi</strong>. All rights reserved.
+</div>
+""", unsafe_allow_html=True)
