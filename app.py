@@ -361,7 +361,7 @@ html, body, .stApp {
 }
 
 /* ============================================================
-   STRICT FORM CONTROL & SELECTBOX UNIFICATION (PURE WHITE FIELDS)
+   FORCED UNIFORM LIGHT THEME FOR ALL INPUT CONTROL FIELDS
    ============================================================ */
 
 [data-testid="stWidgetLabel"] * {
@@ -370,8 +370,9 @@ html, body, .stApp {
     font-size: 0.95rem !important;
 }
 
-/* Text Input & Base Input Containers */
+/* Text Inputs & Input Wrappers */
 .stTextInput input, 
+div[data-baseweb="input"],
 div[data-baseweb="input"] > div {
     background-color: #ffffff !important;
     color: #0d2818 !important;
@@ -385,10 +386,11 @@ div[data-baseweb="input"] > div {
     opacity: 1 !important;
 }
 
-/* Selectbox Main Container */
+/* Selectbox Outer & Inner Overrides */
 div[data-baseweb="select"],
 div[data-baseweb="select"] > div,
-div[data-baseweb="select"] div[role="button"] {
+div[data-baseweb="select"] [role="button"],
+div[data-baseweb="select"] [data-testid="stSelectbox"] {
     background-color: #ffffff !important;
     color: #0d2818 !important;
     border-radius: 12px !important;
@@ -398,21 +400,26 @@ div[data-baseweb="select"] > div {
     border: 2px solid #a8baa9 !important;
 }
 
-div[data-baseweb="select"] * {
+div[data-baseweb="select"] span,
+div[data-baseweb="select"] div,
+div[data-baseweb="select"] svg {
     color: #0d2818 !important;
     fill: #0d2818 !important;
     font-weight: 600 !important;
 }
 
-/* Dropdown Menu Popup List */
+/* Popover Dropdown Menu Options */
 ul[role="listbox"],
-ul[role="listbox"] li {
+ul[role="listbox"] li,
+div[data-baseweb="menu"] {
     background-color: #ffffff !important;
     color: #0d2818 !important;
 }
 
-ul[role="listbox"] li:hover {
+ul[role="listbox"] li:hover,
+div[data-baseweb="menu"] [aria-selected="true"] {
     background-color: #e8f5e9 !important;
+    color: #0d2818 !important;
 }
 
 /* Textarea Input */
