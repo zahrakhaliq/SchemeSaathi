@@ -68,11 +68,9 @@ def valid_need_query(text):
     if not text:
         return False, "Please describe what you need."
 
-    # Reject numbers / punctuation only
     if not any(char.isalpha() for char in text):
         return False, "Please describe your need using words, not only numbers or symbols."
 
-    # Very short meaningless input
     letters = [c for c in text if c.isalpha()]
 
     if len(letters) < 3:
@@ -82,36 +80,32 @@ def valid_need_query(text):
 
 
 # ============================================================
-# VISUAL THEME (SLIDE-DECK MATCHED PALETTE)
+# HIGH CONTRAST THEME (SLIDE DECK PALETTE + HIGH VISIBILITY)
 # ============================================================
 
 st.markdown("""
 <style>
 
+/* Force light root for consistent rendering */
 :root {
-    --bg-dark: #0d2818;
-    --card-bg-dark: #133822;
-    --accent-gold: #e5a93c;
-    --accent-emerald: #2e7d56;
-    --text-gold: #f3be55;
-    --text-main: #172033;
-    --text-muted: #596780;
+    color-scheme: light !important;
 }
 
-.stApp {
-    background: #f4f6f5;
+html, body, .stApp {
+    background-color: #f4f6f5 !important;
+    color: #0d2818 !important;
 }
 
 /* ---------- BRANDING / LOGO HEADER ---------- */
 
 .brand-banner {
     background: linear-gradient(135deg, #0d2818 0%, #174229 100%);
-    padding: 32px 36px;
-    border-radius: 20px;
+    padding: 28px 32px;
+    border-radius: 18px;
     color: #ffffff;
-    box-shadow: 0 10px 25px rgba(13, 40, 24, 0.25);
+    box-shadow: 0 8px 24px rgba(13, 40, 24, 0.2);
     margin-bottom: 24px;
-    border: 1px solid rgba(229, 169, 60, 0.2);
+    border: 2px solid #e5a93c;
 }
 
 .brand-header {
@@ -129,61 +123,60 @@ st.markdown("""
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 900;
     box-shadow: 0 4px 15px rgba(229, 169, 60, 0.4);
 }
 
 .brand-title-group h1 {
     margin: 0;
-    font-size: 2.4rem;
+    font-size: 2.3rem;
     font-weight: 800;
-    color: #ffffff;
+    color: #ffffff !important;
     line-height: 1.1;
-    letter-spacing: -0.5px;
 }
 
 .brand-title-group h1 span.highlight {
-    color: #e5a93c;
+    color: #e5a93c !important;
 }
 
 .brand-title-group .sub-heading {
-    margin: 6px 0 0 0;
+    margin: 4px 0 0 0;
     color: #e5a93c;
-    font-size: 0.82rem;
-    font-weight: 700;
+    font-size: 0.85rem;
+    font-weight: 800;
     letter-spacing: 1.5px;
     text-transform: uppercase;
 }
 
 .brand-tagline {
-    margin-top: 10px;
-    color: #d1dfd7;
-    font-size: 1.02rem;
-    font-weight: 400;
+    margin-top: 8px;
+    color: #e8f0eb;
+    font-size: 1.05rem;
+    font-weight: 500;
 }
 
 /* ---------- PROFILE BOX ---------- */
 
 .profile-box {
     background: #ffffff;
-    border: 1px solid #dce4e0;
-    border-radius: 18px;
-    padding: 22px 24px;
+    border: 2px solid #d4dfd8;
+    border-radius: 16px;
+    padding: 20px 22px;
     margin: 8px 0 20px 0;
-    box-shadow: 0 4px 18px rgba(13, 40, 24, 0.04);
+    box-shadow: 0 4px 14px rgba(13, 40, 24, 0.05);
 }
 
 .profile-title {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 800;
     color: #0d2818;
     margin-bottom: 4px;
 }
 
 .profile-subtitle {
-    color: #596780;
-    font-size: .9rem;
+    color: #3d5245;
+    font-size: .92rem;
     margin-bottom: 14px;
 }
 
@@ -194,12 +187,12 @@ st.markdown("""
     align-items: center;
     gap: 10px;
     padding: 8px 18px;
-    border: 1.5px solid #e5a93c;
+    border: 2px solid #e5a93c;
     border-radius: 999px;
-    background: #fdfbf7;
+    background: #fffdf5;
     color: #0d2818;
-    font-weight: 700;
-    font-size: .92rem;
+    font-weight: 800;
+    font-size: .95rem;
     margin-top: 8px;
 }
 
@@ -214,15 +207,6 @@ st.markdown("""
     color: #0d2818;
 }
 
-/* ---------- SECTION TITLES ---------- */
-
-.section-label {
-    font-size: 1.45rem;
-    font-weight: 800;
-    color: #0d2818;
-    margin: 26px 0 12px;
-}
-
 /* ---------- NEED BOX ---------- */
 
 .need-header {
@@ -230,34 +214,33 @@ st.markdown("""
 }
 
 .need-title {
-    font-size: 1.45rem;
+    font-size: 1.4rem;
     font-weight: 800;
     color: #0d2818;
 }
 
 .need-subtitle {
-    color: #596780;
-    font-size: .92rem;
+    color: #3d5245;
+    font-size: .95rem;
     margin-top: 3px;
 }
 
 /* ---------- FIELD CARDS ---------- */
 
 .field-card {
-    border: 1.5px solid #dce4e0;
+    border: 2px solid #d4dfd8;
     border-radius: 16px;
     padding: 16px;
     background: #ffffff;
     min-height: 110px;
     margin-bottom: 8px;
-    transition: all 0.2s ease;
-    box-shadow: 0 3px 10px rgba(13, 40, 24, 0.03);
+    box-shadow: 0 3px 10px rgba(13, 40, 24, 0.04);
 }
 
 .field-card-title {
     font-weight: 800;
     color: #0d2818;
-    font-size: 1.02rem;
+    font-size: 1.05rem;
     margin-bottom: 6px;
     display: flex;
     align-items: center;
@@ -265,25 +248,25 @@ st.markdown("""
 }
 
 .field-card-text {
-    color: #596780;
-    font-size: .82rem;
+    color: #4a5d52;
+    font-size: .85rem;
     line-height: 1.4;
 }
 
 .field-selected {
     border: 2px solid #e5a93c;
-    background: #fdfbf7;
-    box-shadow: 0 6px 18px rgba(229, 169, 60, 0.15);
+    background: #fffdf5;
+    box-shadow: 0 6px 18px rgba(229, 169, 60, 0.2);
 }
 
 /* ---------- SCHEME CARDS ---------- */
 
 .scheme-card {
-    border: 1px solid #dce4e0;
+    border: 2px solid #d4dfd8;
     border-radius: 18px;
     padding: 22px;
     background: #ffffff;
-    box-shadow: 0 6px 20px rgba(13, 40, 24, 0.05);
+    box-shadow: 0 6px 20px rgba(13, 40, 24, 0.06);
     margin-bottom: 18px;
     min-height: 350px;
 }
@@ -306,21 +289,21 @@ st.markdown("""
     display: inline-block;
     padding: 5px 12px;
     border-radius: 999px;
-    font-size: .78rem;
+    font-size: .8rem;
     font-weight: 800;
     white-space: nowrap;
 }
 
-.education { background:#fff5e5; color:#b37b14; }
+.education { background:#fff5e5; color:#966400; }
 .agriculture { background:#e8f5e9; color:#1b5e20; }
 .business { background:#e0f2f1; color:#004d40; }
-.energy { background:#fffde7; color:#f57f17; }
+.energy { background:#fffde7; color:#8c6d00; }
 .youth { background:#e1f5fe; color:#01579b; }
 .social { background:#f3e5f5; color:#4a148c; }
 .neutral { background:#eceff1; color:#37474f; }
 
 .scheme-desc {
-    color: #37474f;
+    color: #2c3e35;
     margin: 14px 0 16px;
     line-height: 1.55;
     font-size: 0.95rem;
@@ -330,13 +313,13 @@ st.markdown("""
     font-weight: 800;
     color: #0d2818;
     margin-bottom: 5px;
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .scheme-body {
-    color: #455a64;
+    color: #2c3e35;
     font-size: .92rem;
     line-height: 1.5;
 }
@@ -344,25 +327,26 @@ st.markdown("""
 .why {
     padding: 12px 14px;
     border-radius: 12px;
-    font-size: .88rem;
+    font-size: .9rem;
     margin-top: 14px;
+    font-weight: 600;
 }
 
 .status-likely {
     background: #e8f5e9;
-    border-left: 4px solid #2e7d56;
+    border-left: 5px solid #2e7d56;
     color: #1b5e20;
 }
 
 .status-verify {
     background: #fff8e1;
-    border-left: 4px solid #e5a93c;
-    color: #8c6311;
+    border-left: 5px solid #e5a93c;
+    color: #7a5405;
 }
 
 .status-no {
     background: #ffebee;
-    border-left: 4px solid #c62828;
+    border-left: 5px solid #c62828;
     color: #b71c1c;
 }
 
@@ -375,40 +359,69 @@ st.markdown("""
     color: #e5a93c !important;
     text-decoration: none !important;
     font-weight: 800;
-    font-size: .88rem;
-    transition: background 0.2s;
+    font-size: .9rem;
 }
 
-.official-link:hover {
-    background: #174229;
-}
-
-/* ---------- FORM CONTROLS & OVERRIDES ---------- */
-
-.stTextInput input,
-.stTextArea textarea,
-div[data-baseweb="select"] > div {
-    color: #0d2818 !important;
-    background-color: #ffffff !important;
-    border: 1.5px solid #dce4e0 !important;
-    border-radius: 12px !important;
-}
-
-.stTextInput input:focus,
-.stTextArea textarea:focus,
-div[data-baseweb="select"] > div:focus {
-    border-color: #2e7d56 !important;
-}
-
-div[data-testid="stTextArea"] textarea {
-    font-size: 1rem !important;
-    padding: 16px !important;
-    border-radius: 14px !important;
-}
+/* ---------- EXPLICIT FORM INPUT FIXES (HIGH VISIBILITY) ---------- */
 
 [data-testid="stWidgetLabel"] * {
     color: #0d2818 !important;
-    font-weight: 700 !important;
+    font-weight: 800 !important;
+    font-size: 0.95rem !important;
+}
+
+.stTextInput input {
+    color: #0d2818 !important;
+    background-color: #ffffff !important;
+    border: 2px solid #a8baa9 !important;
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+}
+
+.stTextInput input::placeholder {
+    color: #617568 !important;
+    opacity: 1 !important;
+}
+
+/* Text Area Override */
+div[data-testid="stTextArea"] textarea {
+    color: #0d2818 !important;
+    background-color: #ffffff !important;
+    border: 2px solid #a8baa9 !important;
+    border-radius: 14px !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    padding: 16px !important;
+}
+
+div[data-testid="stTextArea"] textarea::placeholder {
+    color: #617568 !important;
+    opacity: 1 !important;
+}
+
+/* Select Box Overrides */
+div[data-baseweb="select"] > div {
+    background-color: #ffffff !important;
+    border: 2px solid #a8baa9 !important;
+    border-radius: 12px !important;
+    color: #0d2818 !important;
+}
+
+div[data-baseweb="select"] * {
+    color: #0d2818 !important;
+    font-weight: 600 !important;
+}
+
+/* Expander Fix */
+.stExpander {
+    background: #ffffff !important;
+    border: 2px solid #d4dfd8 !important;
+    border-radius: 14px !important;
+}
+
+.stExpander summary * {
+    color: #0d2818 !important;
+    font-weight: 800 !important;
 }
 
 /* ---------- BUTTONS ---------- */
@@ -418,27 +431,33 @@ div.stButton > button {
     font-weight: 800 !important;
     background: #ffffff !important;
     color: #0d2818 !important;
-    border: 1.5px solid #dce4e0 !important;
-    padding: 10px 20px !important;
+    border: 2px solid #0d2818 !important;
+    padding: 12px 20px !important;
+    font-size: 1rem !important;
 }
 
 div.stButton > button:hover {
-    border-color: #e5a93c !important;
-    color: #e5a93c !important;
+    background: #0d2818 !important;
+    color: #ffffff !important;
 }
 
 div.stButton > button[kind="primary"] {
-    background: linear-gradient(135deg, #e5a93c 0%, #d4972c 100%) !important;
+    background: #e5a93c !important;
     color: #0d2818 !important;
-    border: none !important;
-    box-shadow: 0 6px 16px rgba(229, 169, 60, 0.3) !important;
+    border: 2px solid #b88120 !important;
+    box-shadow: 0 6px 18px rgba(229, 169, 60, 0.35) !important;
 }
 
 div.stButton > button[kind="primary"] * {
     color: #0d2818 !important;
+    font-weight: 800 !important;
 }
 
-/* Hide Streamlit Sidebar */
+div.stButton > button[kind="primary"]:hover {
+    background: #d4972c !important;
+}
+
+/* Hide Sidebar */
 [data-testid="stSidebar"] {
     display: none !important;
 }
@@ -460,7 +479,7 @@ retriever = get_retriever()
 
 
 # ============================================================
-# BRANDING HEADER (MATCHING PRESENTATION BANNER)
+# BRANDING HEADER
 # ============================================================
 
 st.markdown("""
@@ -485,7 +504,7 @@ st.markdown("""
 <div class="profile-box">
     <div class="profile-title">👤 Your Profile</div>
     <div class="profile-subtitle">
-        Provide basic details to evaluate preliminary scheme eligibility.
+        Provide basic details so we can evaluate preliminary scheme eligibility criteria.
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -562,14 +581,14 @@ st.markdown("""
 <div class="need-header">
     <div class="need-title">💬 What do you need help with?</div>
     <div class="need-subtitle">
-        Describe your request naturally. No technical or official government terms required.
+        Describe your situation naturally. No technical or official government terms required.
     </div>
 </div>
 """, unsafe_allow_html=True)
 
 
 # ============================================================
-# CATEGORY SHORTCUTS (MATCHING SLIDE ICONS & COLORS)
+# CATEGORY SHORTCUTS
 # ============================================================
 
 field_options = [
@@ -728,7 +747,6 @@ if find or browse:
             )
             st.stop()
 
-        # Input validation for garbage/numeric-only queries
         query_valid, query_error = valid_need_query(query)
         if not query_valid:
             st.error(query_error)
@@ -826,7 +844,7 @@ if find or browse:
     # ========================================================
     else:
         st.markdown(
-            '<div class="section-label">🎯 Relevant Government Schemes</div>',
+            '<div class="need-title" style="margin-top:20px;">🎯 Relevant Government Schemes</div>',
             unsafe_allow_html=True,
         )
 
@@ -928,10 +946,10 @@ if find or browse:
 
 
 # ============================================================
-# COMPACT FOOTER / HOW IT WORKS
+# FOOTER / HOW IT WORKS
 # ============================================================
 
-st.markdown("<br><hr style='border: 0; border-top: 1px solid #dce4e0;'><br>", unsafe_allow_html=True)
+st.markdown("<br><hr style='border: 0; border-top: 2px solid #d4dfd8;'><br>", unsafe_allow_html=True)
 
 with st.expander("ℹ️ How SchemeSaathi Works"):
     c1, c2, c3 = st.columns(3)
