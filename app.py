@@ -13,11 +13,73 @@ from llm import explain_results
 load_dotenv()
 
 st.set_page_config(
-    page_title="Punjab Scheme Finder",
+    page_title="SchemeSaathi - Punjab Government Scheme Finder",
     page_icon="🇵🇰",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
+
+# ============================================================
+# CONSTANTS & UTILITIES
+# ============================================================
+
+PUNJAB_DISTRICTS = [
+    "Attock",
+    "Bahawalnagar",
+    "Bahawalpur",
+    "Bhakkar",
+    "Chakwal",
+    "Chiniot",
+    "Dera Ghazi Khan",
+    "Faisalabad",
+    "Gujranwala",
+    "Gujrat",
+    "Hafizabad",
+    "Jhang",
+    "Jhelum",
+    "Kasur",
+    "Khanewal",
+    "Khushab",
+    "Lahore",
+    "Layyah",
+    "Lodhran",
+    "Mandi Bahauddin",
+    "Mianwali",
+    "Multan",
+    "Muzaffargarh",
+    "Nankana Sahib",
+    "Narowal",
+    "Okara",
+    "Pakpattan",
+    "Rahim Yar Khan",
+    "Rajanpur",
+    "Rawalpindi",
+    "Sahiwal",
+    "Sargodha",
+    "Sheikhupura",
+    "Sialkot",
+    "Toba Tek Singh",
+    "Vehari",
+]
+
+def valid_need_query(text):
+    text = text.strip()
+
+    if not text:
+        return False, "Please describe what you need."
+
+    # Reject numbers / punctuation only
+    if not any(char.isalpha() for char in text):
+        return False, "Please describe your need using words, not only numbers or symbols."
+
+    # Very short meaningless input
+    letters = [c for c in text if c.isalpha()]
+
+    if len(letters) < 3:
+        return False, "Please provide a little more detail about what you need."
+
+    return True, ""
+
 
 # ============================================================
 # VISUAL THEME
@@ -35,31 +97,61 @@ st.markdown("""
     );
 }
 
-/* ---------- HERO ---------- */
+/* ---------- BRANDING / LOGO HEADER ---------- */
 
-.hero {
-    padding: 30px 32px;
-    border-radius: 24px;
-    background: linear-gradient(
-        135deg,
-        #075e54 0%,
-        #087f6d 48%,
-        #6b4fd3 100%
-    );
+.brand-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 0 20px 0;
+    margin-bottom: 8px;
+}
+
+.brand-logo {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #075e54 0%, #087f6d 100%);
     color: white;
-    box-shadow: 0 14px 35px rgba(20, 55, 70, .14);
-    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    font-weight: 800;
+    box-shadow: 0 6px 16px rgba(7, 94, 84, 0.25);
+    border: 2px solid #ffffff;
+    position: relative;
 }
 
-.hero h1 {
-    margin: 0 0 8px 0;
-    font-size: 2.35rem;
+.brand-logo::after {
+    content: "•";
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    font-size: 0.8rem;
+    color: #ffd700;
 }
 
-.hero p {
+.brand-title-group h1 {
     margin: 0;
-    opacity: .94;
-    font-size: 1.02rem;
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: #172033;
+    line-height: 1.1;
+}
+
+.brand-title-group .sub-heading {
+    margin: 3px 0 0 0;
+    color: #075e54;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.brand-tagline {
+    margin-top: 4px;
+    color: #667085;
+    font-size: 0.92rem;
 }
 
 /* ---------- PROFILE ---------- */
@@ -69,7 +161,7 @@ st.markdown("""
     border: 1px solid #e3e7ee;
     border-radius: 20px;
     padding: 20px 22px;
-    margin: 8px 0 22px 0;
+    margin: 8px 0 18px 0;
     box-shadow: 0 7px 22px rgba(31, 41, 55, .06);
 }
 
@@ -112,32 +204,6 @@ st.markdown("""
     background: #e7f5f0;
 }
 
-/* ---------- MINI HOW-IT-WORK CARDS ---------- */
-
-.mini-card {
-    padding: 17px 18px;
-    border-radius: 18px;
-    background: rgba(255,255,255,.92);
-    border: 1px solid #e7e8ef;
-    box-shadow: 0 7px 20px rgba(35, 45, 60, .06);
-    min-height: 108px;
-}
-
-.mini-icon {
-    font-size: 1.55rem;
-}
-
-.mini-title {
-    font-weight: 700;
-    margin-top: 6px;
-}
-
-.mini-text {
-    color: #667085;
-    font-size: .88rem;
-    margin-top: 3px;
-}
-
 /* ---------- SECTION TITLES ---------- */
 
 .section-label {
@@ -150,18 +216,18 @@ st.markdown("""
 /* ---------- NEED BOX ---------- */
 
 .need-header {
-    padding: 2px 0 8px 0;
+    padding: 12px 0 8px 0;
 }
 
 .need-title {
-    font-size: 1.65rem;
+    font-size: 1.4rem;
     font-weight: 800;
     color: #172033;
 }
 
 .need-subtitle {
     color: #667085;
-    font-size: .95rem;
+    font-size: .92rem;
     margin-top: 3px;
 }
 
@@ -231,40 +297,13 @@ st.markdown("""
     white-space: nowrap;
 }
 
-.education {
-    background:#eee9ff;
-    color:#5a3eb7;
-}
-
-.agriculture {
-    background:#e4f7eb;
-    color:#177245;
-}
-
-.business {
-    background:#fff0dc;
-    color:#a45a00;
-}
-
-.energy {
-    background:#fff8cf;
-    color:#806500;
-}
-
-.youth {
-    background:#e5f3ff;
-    color:#17649a;
-}
-
-.social {
-    background:#ffe7ee;
-    color:#a33c5a;
-}
-
-.neutral {
-    background:#eef1f5;
-    color:#556070;
-}
+.education { background:#eee9ff; color:#5a3eb7; }
+.agriculture { background:#e4f7eb; color:#177245; }
+.business { background:#fff0dc; color:#a45a00; }
+.energy { background:#fff8cf; color:#806500; }
+.youth { background:#e5f3ff; color:#17649a; }
+.social { background:#ffe7ee; color:#a33c5a; }
+.neutral { background:#eef1f5; color:#556070; }
 
 .scheme-desc {
     color:#4b5565;
@@ -395,19 +434,11 @@ div.stButton > button[kind="primary"] * {
 
 /* ---------- FORCE LIGHT UI ---------- */
 
-:root,
-html,
-body {
+:root, html, body {
     color-scheme: light !important;
 }
 
-html,
-body,
-.stApp,
-[data-testid="stAppViewContainer"],
-[data-testid="stMainViewContainer"],
-[data-testid="stMain"],
-[data-testid="stHeader"] {
+html, body, .stApp, [data-testid="stAppViewContainer"], [data-testid="stMainViewContainer"], [data-testid="stMain"], [data-testid="stHeader"] {
     background-color: #ffffff !important;
     color: #172033 !important;
 }
@@ -426,30 +457,8 @@ body,
     border-bottom: 1px solid #eef0f4 !important;
 }
 
-/* Hide sidebar completely from the user-facing layout */
 [data-testid="stSidebar"] {
     display: none !important;
-}
-
-@media (prefers-color-scheme: dark) {
-
-    html,
-    body,
-    .stApp,
-    [data-testid="stAppViewContainer"],
-    [data-testid="stMain"],
-    [data-testid="stHeader"] {
-        background-color: #ffffff !important;
-        color: #172033 !important;
-    }
-
-    .stTextInput input,
-    .stTextArea textarea,
-    div[data-baseweb="select"] > div {
-        background-color: #ffffff !important;
-        color: #172033 !important;
-        -webkit-text-fill-color: #172033 !important;
-    }
 }
 
 </style>
@@ -469,16 +478,17 @@ retriever = get_retriever()
 
 
 # ============================================================
-# HERO
+# LOGO / BRANDING HEADER
 # ============================================================
 
 st.markdown("""
-<div class="hero">
-    <h1>🇵🇰 Punjab Government Scheme Finder</h1>
-    <p>
-        Tell us what you need in simple words.
-        We’ll help you discover relevant Punjab Government schemes.
-    </p>
+<div class="brand-header">
+    <div class="brand-logo">S</div>
+    <div class="brand-title-group">
+        <h1>SchemeSaathi</h1>
+        <div class="sub-heading">PUNJAB GOVERNMENT SCHEME FINDER</div>
+        <div class="brand-tagline">Find the government support you need in simple words.</div>
+    </div>
 </div>
 """, unsafe_allow_html=True)
 
@@ -489,9 +499,9 @@ st.markdown("""
 
 st.markdown("""
 <div class="profile-box">
-    <div class="profile-title">👤 Your profile</div>
+    <div class="profile-title">👤 Your Profile</div>
     <div class="profile-subtitle">
-        Add a few basic details so we can personalize your results.
+        Add a few basic details so we can personalize your results and check eligibility criteria.
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -506,9 +516,9 @@ with p1:
     )
 
 with p2:
-    district = st.text_input(
+    district = st.selectbox(
         "District *",
-        placeholder="e.g. Lahore",
+        ["Select your district"] + PUNJAB_DISTRICTS,
     )
 
 with p3:
@@ -529,88 +539,35 @@ with p3:
 
 # Parse age
 age = None
-
 if age_raw.strip().isdigit():
     parsed_age = int(age_raw.strip())
-
     if 1 <= parsed_age <= 100:
         age = parsed_age
 
 
-# Profile pill
+# Profile pill display
 profile_ready = (
     age is not None
-    and bool(district.strip())
+    and district != "Select your district"
     and occupation != "Not specified"
 )
 
 if profile_ready:
-
     st.markdown(
         f"""
         <div class="profile-pill">
             <span class="profile-pill-icon">👤</span>
             <span>
                 {int(age)} years&nbsp;&nbsp;·&nbsp;&nbsp;
-                {html.escape(district.strip())}&nbsp;&nbsp;·&nbsp;&nbsp;
+                {html.escape(district)}&nbsp;&nbsp;·&nbsp;&nbsp;
                 {html.escape(occupation)}
             </span>
         </div>
         """,
         unsafe_allow_html=True,
     )
-
 else:
-
-    st.caption(
-        "Complete your profile above to personalize eligibility guidance."
-    )
-
-
-# ============================================================
-# HOW IT WORKS
-# ============================================================
-
-st.markdown(
-    '<div class="section-label">✨ How SchemeSaathi works</div>',
-    unsafe_allow_html=True,
-)
-
-c1, c2, c3 = st.columns(3)
-
-for col, icon, title, text in [
-    (
-        c1,
-        "💬",
-        "Tell us your need",
-        "Write naturally — no special keywords required.",
-    ),
-    (
-        c2,
-        "🧠",
-        "We find matches",
-        "Semantic search looks through the scheme knowledge base.",
-    ),
-    (
-        c3,
-        "🔗",
-        "Verify & apply",
-        "Open the official Government of Punjab source.",
-    ),
-]:
-
-    with col:
-
-        st.markdown(
-            f"""
-            <div class="mini-card">
-                <div class="mini-icon">{icon}</div>
-                <div class="mini-title">{title}</div>
-                <div class="mini-text">{text}</div>
-            </div>
-            """,
-            unsafe_allow_html=True,
-        )
+    st.caption("Complete your profile above to personalize eligibility guidance.")
 
 
 # ============================================================
@@ -621,8 +578,7 @@ st.markdown("""
 <div class="need-header">
     <div class="need-title">💬 What do you need help with?</div>
     <div class="need-subtitle">
-        Describe your situation in your own words. You don't need to know
-        the name or category of a government scheme.
+        Describe your situation in your own words. You don't need to know official terminology or specific scheme names.
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -676,23 +632,16 @@ if "selected_field" not in st.session_state:
     st.session_state.selected_field = None
 
 
-st.caption("Optional: choose a field, or let AI understand it from your need.")
+st.caption("Or choose a field (optional):")
 
 for row_start in range(0, len(field_options), 3):
-
     cols = st.columns(3)
-
     for col, (icon, title, desc, category) in zip(
         cols,
         field_options[row_start:row_start + 3],
     ):
-
         with col:
-
-            selected = (
-                st.session_state.selected_field == category
-            )
-
+            selected = (st.session_state.selected_field == category)
             card_class = (
                 "field-card field-selected"
                 if selected
@@ -718,29 +667,21 @@ for row_start in range(0, len(field_options), 3):
                 key=f"field_{category}",
                 use_container_width=True,
             ):
-
                 st.session_state.selected_field = (
                     None if selected else category
                 )
-
                 st.rerun()
 
 
 selected_category = st.session_state.selected_field
 
-
 if selected_category:
-
     st.caption(
         f"Selected field: **{selected_category}** · "
         "You can still describe your need in your own words."
     )
-
 else:
-
-    st.caption(
-        "No field selected — AI will understand the field from your need."
-    )
+    st.caption("No field selected — AI will infer the field directly from your request.")
 
 
 # ============================================================
@@ -749,12 +690,12 @@ else:
 
 query = st.text_area(
     "What do you need?",
-    height=150,
+    height=140,
     placeholder=(
-        "Example: I need financial support for my farm.\n\n"
-        "You can explain your situation naturally — no special keywords required."
+        "Example: I need financial support for my farm...\n\n"
+        "Tell us your problem naturally."
     ),
-    label_visibility="visible",
+    label_visibility="collapsed",
 )
 
 
@@ -765,7 +706,6 @@ query = st.text_area(
 b1, b2 = st.columns([1.15, 1])
 
 with b1:
-
     find = st.button(
         "🔎 Find schemes for me",
         type="primary",
@@ -773,7 +713,6 @@ with b1:
     )
 
 with b2:
-
     browse = st.button(
         "📋 Browse all schemes",
         use_container_width=True,
@@ -781,93 +720,72 @@ with b2:
 
 
 # ============================================================
-# SEARCH / BROWSE
+# SEARCH / BROWSE EXECUTION
 # ============================================================
 
 if find or browse:
 
     if find:
-
         missing = []
 
         if age is None:
             missing.append("Age")
 
-        if not district.strip():
+        if district == "Select your district":
             missing.append("District")
 
         if occupation == "Not specified":
             missing.append("Occupation")
 
-        if not query.strip():
-            missing.append("What you need")
-
         if missing:
-
             st.error(
-                "Please enter the required field(s): "
+                "Please complete the required profile field(s): "
                 + ", ".join(missing)
                 + "."
             )
-
             st.stop()
 
+        # Input validation for garbage/numeric-only queries
+        query_valid, query_error = valid_need_query(query)
+        if not query_valid:
+            st.error(query_error)
+            st.stop()
 
     # --------------------------------------------------------
     # Build user profile
     # --------------------------------------------------------
-
-    student = False
-    farmer = False
-    business_owner = False
-    income = None
-    marks = None
+    profile_district = "" if district == "Select your district" else district
 
     profile = build_profile_from_text(
         query=query,
         age=age,
-        district=district,
+        district=profile_district,
         occupation=occupation,
-        student=student,
-        farmer=farmer,
-        business_owner=business_owner,
-        income=income,
-        marks=marks,
+        student=False,
+        farmer=False,
+        business_owner=False,
+        income=None,
+        marks=None,
     )
-
 
     # --------------------------------------------------------
     # Browse
     # --------------------------------------------------------
-
     if browse:
-
         results = retriever.browse(
             category=None,
             top_k=100,
         )
-
         explanation = None
-
 
     # --------------------------------------------------------
     # Search
     # --------------------------------------------------------
-
     else:
-
-        # IMPORTANT:
-        # The user's stated need remains the primary retrieval signal.
-        # Profile facts are mainly used for preliminary eligibility.
-
         inferred_category = infer_category_from_query(
             query,
             {},
         )
-
-        # Optional category constraint.
-        # If user selected a field, use it.
-        # Otherwise AI infers the field from the need.
 
         active_category = (
             selected_category
@@ -882,10 +800,7 @@ if find or browse:
             category=active_category,
         )
 
-        # Dastak is only for explicit service/document/license requests.
-
         if not is_service_query(query):
-
             results = [
                 (item, score)
                 for item, score in results
@@ -898,48 +813,38 @@ if find or browse:
             results,
         )
 
-
     # ========================================================
     # NO RESULTS
     # ========================================================
-
     if not results:
-
         if find and is_service_query(query):
-
             st.info(
                 "This sounds like a Punjab government service request "
                 "rather than a financial/support scheme. You can use "
                 "Maryam Ki Dastak to find the relevant service."
             )
-
             st.markdown(
                 """
                 <a class="official-link"
                    href="https://dastak.punjab.gov.pk/citizen/services"
                    target="_blank">
-                    🔗 Open official Dastak services
+                   🔗 Open official Dastak services
                 </a>
                 """,
                 unsafe_allow_html=True,
             )
-
         else:
-
             st.warning(
                 "No strong match was found in the current dataset. "
                 "Try describing your need in a little more detail."
             )
 
-
     # ========================================================
-    # RESULTS
+    # DISPLAY RESULTS
     # ========================================================
-
     else:
-
         st.markdown(
-            '<div class="section-label">🎯 Recommended schemes</div>',
+            '<div class="section-label">🎯 Schemes that may help you</div>',
             unsafe_allow_html=True,
         )
 
@@ -947,17 +852,14 @@ if find or browse:
             st.info(explanation)
 
         if find:
-
             inferred = infer_category_from_query(
                 query,
                 profile,
             )
-
             if inferred:
-
                 st.caption(
                     f"We detected your main need as "
-                    f"**{inferred}** and prioritized schemes in that area."
+                    f"**{inferred}** and prioritized relevant schemes."
                 )
 
         st.caption(
@@ -965,19 +867,11 @@ if find or browse:
             "These are preliminary matches, not official eligibility decisions."
         )
 
-
-        # ----------------------------------------------------
-        # Scheme cards
-        # ----------------------------------------------------
-
+        # Render Scheme Cards (2 per row)
         for start in range(0, len(results), 2):
-
             cols = st.columns(2)
-
             for offset, col in enumerate(cols):
-
                 idx = start + offset
-
                 if idx >= len(results):
                     continue
 
@@ -988,11 +882,7 @@ if find or browse:
                     profile,
                 )
 
-                cat = item.get(
-                    "category",
-                    "Other",
-                )
-
+                cat = item.get("category", "Other")
                 cat_class = {
                     "Education": "education",
                     "Agriculture": "agriculture",
@@ -1001,134 +891,73 @@ if find or browse:
                     "Youth": "youth",
                     "Social Welfare": "social",
                     "Livestock": "agriculture",
-                }.get(
-                    cat,
-                    "neutral",
-                )
+                }.get(cat, "neutral")
 
                 status_class = {
                     "likely": "status-likely",
                     "needs_verification": "status-verify",
                     "not_eligible": "status-no",
-                }[
-                    assessment["status"]
-                ]
+                }[assessment["status"]]
 
                 status_text = {
                     "likely": "🟢 Likely match",
-                    "needs_verification": "🟡 Needs verification",
+                    "needs_verification": "🟡 Verify requirements",
                     "not_eligible": "🔴 Basic requirement mismatch",
-                }[
-                    assessment["status"]
-                ]
+                }[assessment["status"]]
 
-                name = html.escape(
-                    item["name"]
-                )
-
-                desc = html.escape(
-                    item.get("description", "")
-                )
-
-                benefits = html.escape(
-                    item.get("benefits", "")
-                )
-
+                name = html.escape(item["name"])
+                desc = html.escape(item.get("description", ""))
+                benefits = html.escape(item.get("benefits", ""))
                 eligibility_text = "<br>".join(
                     "• " + html.escape(x)
-                    for x in item.get(
-                        "eligibility",
-                        [],
-                    )
+                    for x in item.get("eligibility", [])
                 )
+                why = html.escape(" ".join(assessment.get("reasons", [])))
+                url = html.escape(item.get("official_url", ""), quote=True)
 
-                why = html.escape(
-                    " ".join(
-                        assessment.get(
-                            "reasons",
-                            [],
-                        )
-                    )
-                )
-
-                url = html.escape(
-                    item.get(
-                        "official_url",
-                        "",
-                    ),
-                    quote=True,
-                )
-
-                card = f"""
+                card_html = f"""
                 <div class="scheme-card">
-
                     <div class="scheme-top">
-
-                        <div class="scheme-name">
-                            {name}
-                        </div>
-
-                        <span class="badge {cat_class}">
-                            {html.escape(cat)}
-                        </span>
-
+                        <div class="scheme-name">{name}</div>
+                        <span class="badge {cat_class}">{html.escape(cat)}</span>
                     </div>
 
-                    <div class="scheme-desc">
-                        {desc}
-                    </div>
+                    <div class="scheme-desc">{desc}</div>
 
-                    <div class="scheme-section-title">
-                        What you get
-                    </div>
-
-                    <div class="scheme-body">
-                        {benefits}
-                    </div>
+                    <div class="scheme-section-title">What you get</div>
+                    <div class="scheme-body">{benefits}</div>
 
                     <div style="height:12px"></div>
 
-                    <div class="scheme-section-title">
-                        Who it is for
-                    </div>
-
-                    <div class="scheme-body">
-                        {eligibility_text}
-                    </div>
+                    <div class="scheme-section-title">Who it is for</div>
+                    <div class="scheme-body">{eligibility_text}</div>
 
                     <div class="why {status_class}">
-                        <b>{status_text}</b><br>
+                        <strong>{status_text}</strong><br>
                         {why}
                     </div>
 
-                    <a
-                        class="official-link"
-                        href="{url}"
-                        target="_blank"
-                    >
-                        🔗 Open official source
+                    <a class="official-link" href="{url}" target="_blank">
+                        🔗 Official government source
                     </a>
-
                 </div>
                 """
 
                 with col:
-
-                    st.markdown(
-                        card,
-                        unsafe_allow_html=True,
-                    )
+                    st.markdown(card_html, unsafe_allow_html=True)
 
 
 # ============================================================
-# FOOTER
+# COMPACT FOOTER / HOW IT WORKS
 # ============================================================
 
-st.divider()
+st.markdown("<br><hr style='border: 0; border-top: 1px solid #e3e7ee;'><br>", unsafe_allow_html=True)
 
-st.caption(
-    "This is an information and discovery assistant. "
-    "Matches and eligibility labels are preliminary. "
-    "Always verify the latest eligibility, deadlines and application "
-    "instructions on the linked official Government of Punjab source."
-)
+with st.expander("ℹ️ How SchemeSaathi works"):
+    c1, c2, c3 = st.columns(3)
+    with c1:
+        st.markdown("**1. Tell us your need**\nWrite naturally — no official keywords or code required.")
+    with c2:
+        st.markdown("**2. We find matches**\nSemantic AI search checks the official scheme knowledge base.")
+    with c3:
+        st.markdown("**3. Verify & apply**\nCheck preliminary eligibility rules and proceed to official government portals.")
