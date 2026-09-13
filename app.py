@@ -1,4 +1,5 @@
 import html
+import textwrap
 import streamlit as st
 from dotenv import load_dotenv
 from rag import SchemeRetriever
@@ -842,13 +843,7 @@ if find or browse:
                 "rather than a support scheme. You can check Maryam Ki Dastak for official civic services."
             )
             st.markdown(
-                """
-                <a class="official-link"
-                   href="https://dastak.punjab.gov.pk/citizen/services"
-                   target="_blank">
-                   🔗 Open Official Dastak Portal
-                </a>
-                """,
+                """<a class="official-link" href="https://dastak.punjab.gov.pk/citizen/services" target="_blank">🔗 Open Official Dastak Portal</a>""",
                 unsafe_allow_html=True,
             )
         else:
@@ -931,33 +926,33 @@ if find or browse:
                 why = html.escape(" ".join(assessment.get("reasons", [])))
                 url = html.escape(item.get("official_url", ""), quote=True)
 
-                card_html = f"""
+                card_html = textwrap.dedent(f"""
                 <div class="scheme-card">
-                    <div class="scheme-top">
-                        <div class="scheme-name">{name}</div>
-                        <span class="badge {cat_class}">{html.escape(cat)}</span>
-                    </div>
-
-                    <div class="scheme-desc">{desc}</div>
-
-                    <div class="scheme-section-title">Benefits</div>
-                    <div class="scheme-body">{benefits}</div>
-
-                    <div style="height:12px"></div>
-
-                    <div class="scheme-section-title">Eligibility Criteria</div>
-                    <div class="scheme-body">{eligibility_text}</div>
-
-                    <div class="why {status_class}">
-                        <strong>{status_text}</strong><br>
-                        {why}
-                    </div>
-
-                    <a class="official-link" href="{url}" target="_blank">
-                        🔗 Official Government Link
-                    </a>
+                <div class="scheme-top">
+                <div class="scheme-name">{name}</div>
+                <span class="badge {cat_class}">{html.escape(cat)}</span>
                 </div>
-                """
+
+                <div class="scheme-desc">{desc}</div>
+
+                <div class="scheme-section-title">Benefits</div>
+                <div class="scheme-body">{benefits}</div>
+
+                <div style="height:12px"></div>
+
+                <div class="scheme-section-title">Eligibility Criteria</div>
+                <div class="scheme-body">{eligibility_text}</div>
+
+                <div class="why {status_class}">
+                <strong>{status_text}</strong><br>
+                {why}
+                </div>
+
+                <a class="official-link" href="{url}" target="_blank">
+                🔗 Official Government Link
+                </a>
+                </div>
+                """).strip()
 
                 with col:
                     st.markdown(card_html, unsafe_allow_html=True)
