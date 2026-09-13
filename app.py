@@ -80,13 +80,12 @@ def valid_need_query(text):
 
 
 # ============================================================
-# HIGH CONTRAST THEME (SLIDE DECK PALETTE + HIGH VISIBILITY)
+# HIGH CONTRAST & UNIFORM COMPONENT STYLING
 # ============================================================
 
 st.markdown("""
 <style>
 
-/* Force light root for consistent rendering */
 :root {
     color-scheme: light !important;
 }
@@ -96,7 +95,7 @@ html, body, .stApp {
     color: #0d2818 !important;
 }
 
-/* ---------- BRANDING / LOGO HEADER ---------- */
+/* ---------- BRANDING BANNER ---------- */
 
 .brand-banner {
     background: linear-gradient(135deg, #0d2818 0%, #174229 100%);
@@ -180,8 +179,6 @@ html, body, .stApp {
     margin-bottom: 14px;
 }
 
-/* Profile pill */
-
 .profile-pill {
     display: inline-flex;
     align-items: center;
@@ -207,7 +204,7 @@ html, body, .stApp {
     color: #0d2818;
 }
 
-/* ---------- NEED BOX ---------- */
+/* ---------- NEED SECTION ---------- */
 
 .need-header {
     padding: 10px 0 6px 0;
@@ -225,7 +222,7 @@ html, body, .stApp {
     margin-top: 3px;
 }
 
-/* ---------- FIELD CARDS ---------- */
+/* ---------- CATEGORY CARDS ---------- */
 
 .field-card {
     border: 2px solid #d4dfd8;
@@ -362,7 +359,9 @@ html, body, .stApp {
     font-size: .9rem;
 }
 
-/* ---------- EXPLICIT FORM INPUT FIXES (HIGH VISIBILITY) ---------- */
+/* ============================================================
+   STRICT FORM CONTROL & SELECTBOX UNIFICATION (PURE WHITE FIELDS)
+   ============================================================ */
 
 [data-testid="stWidgetLabel"] * {
     color: #0d2818 !important;
@@ -370,9 +369,11 @@ html, body, .stApp {
     font-size: 0.95rem !important;
 }
 
-.stTextInput input {
-    color: #0d2818 !important;
+/* Text Input & Base Input Containers */
+.stTextInput input, 
+div[data-baseweb="input"] > div {
     background-color: #ffffff !important;
+    color: #0d2818 !important;
     border: 2px solid #a8baa9 !important;
     border-radius: 12px !important;
     font-weight: 600 !important;
@@ -383,7 +384,37 @@ html, body, .stApp {
     opacity: 1 !important;
 }
 
-/* Text Area Override */
+/* Selectbox Main Container */
+div[data-baseweb="select"],
+div[data-baseweb="select"] > div,
+div[data-baseweb="select"] div[role="button"] {
+    background-color: #ffffff !important;
+    color: #0d2818 !important;
+    border-radius: 12px !important;
+}
+
+div[data-baseweb="select"] > div {
+    border: 2px solid #a8baa9 !important;
+}
+
+div[data-baseweb="select"] * {
+    color: #0d2818 !important;
+    fill: #0d2818 !important;
+    font-weight: 600 !important;
+}
+
+/* Dropdown Menu Popup List */
+ul[role="listbox"],
+ul[role="listbox"] li {
+    background-color: #ffffff !important;
+    color: #0d2818 !important;
+}
+
+ul[role="listbox"] li:hover {
+    background-color: #e8f5e9 !important;
+}
+
+/* Textarea Input */
 div[data-testid="stTextArea"] textarea {
     color: #0d2818 !important;
     background-color: #ffffff !important;
@@ -399,20 +430,7 @@ div[data-testid="stTextArea"] textarea::placeholder {
     opacity: 1 !important;
 }
 
-/* Select Box Overrides */
-div[data-baseweb="select"] > div {
-    background-color: #ffffff !important;
-    border: 2px solid #a8baa9 !important;
-    border-radius: 12px !important;
-    color: #0d2818 !important;
-}
-
-div[data-baseweb="select"] * {
-    color: #0d2818 !important;
-    font-weight: 600 !important;
-}
-
-/* Expander Fix */
+/* Expander Box */
 .stExpander {
     background: #ffffff !important;
     border: 2px solid #d4dfd8 !important;
