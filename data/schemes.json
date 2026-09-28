@@ -151,7 +151,7 @@
     "rules": {
       "farmer_required": true
     },
-    "source_refresh_status": "Verified by direct HTTP."
+    "source_refresh_status": "Source could not be verified; existing URL retained."
   },
   {
     "name": "CM Punjab Asaan Karobar Card",
