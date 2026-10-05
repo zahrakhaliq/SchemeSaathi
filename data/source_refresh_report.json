@@ -1,19 +1,12 @@
 {
-  "run_date": "2026-09-28",
+  "run_date": "2026-10-05",
   "agent_version": "2.2",
   "checked": 36,
-  "working": 35,
+  "working": 36,
   "verified_via_search": 2,
   "repaired": 0,
-  "unresolved": 1,
+  "unresolved": 0,
   "changes": [
-    {
-      "scheme": "High Efficiency Irrigation Systems (HEIS) Subsidy",
-      "type": "unresolved",
-      "old_url": "https://agripunjab.punjab.gov.pk/node/9410",
-      "confidence": 0.0,
-      "reason": "No high-confidence official replacement found."
-    },
     {
       "scheme": "CM Punjab Livestock Card",
       "type": "verified_via_search",

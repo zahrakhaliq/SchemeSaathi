@@ -15,7 +15,7 @@
     "official_url": "https://agripunjab.punjab.gov.pk/agri-adp-cminitiatives",
     "keywords": "farmer agriculture loan kisan kissan card interest free crop",
     "status": "Current initiative (2026-27)",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {
       "farmer_required": true
     },
@@ -37,7 +37,7 @@
     "official_url": "https://agripunjab.punjab.gov.pk/agri-adp-cminitiatives",
     "keywords": "green tractor farmer tractor subsidy agriculture 5 acres",
     "status": "Current initiative (2026-27)",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {
       "farmer_required": true
     },
@@ -59,7 +59,7 @@
     "official_url": "https://agripunjab.punjab.gov.pk/agri-adp-cminitiatives",
     "keywords": "green tractor high power farmer tractor subsidy agriculture 7 acres",
     "status": "Current initiative (2026-27)",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {
       "farmer_required": true
     },
@@ -81,7 +81,7 @@
     "official_url": "https://agripunjab.punjab.gov.pk/agri-adp-cminitiatives",
     "keywords": "agriculture graduate internship work for punjab",
     "status": "Current initiative (2026-27)",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {
       "student_required": false
     },
@@ -103,7 +103,7 @@
     "official_url": "https://agripunjab.punjab.gov.pk/agri-adp-newschemes",
     "keywords": "P CLAMP agriculture machinery grant farmer service provider financing",
     "status": "Current project (2025-26 to 2030-31)",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {
       "farmer_required": true
     },
@@ -125,7 +125,7 @@
     "official_url": "https://agripunjab.punjab.gov.pk/agri-adp-newschemes",
     "keywords": "groundwater recharge subsidy farmer borehole agriculture water",
     "status": "Current project (2026-27)",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {
       "farmer_required": true
     },
@@ -147,11 +147,11 @@
     "official_url": "https://agripunjab.punjab.gov.pk/node/9410",
     "keywords": "drip sprinkler irrigation subsidy farmer HEIS water PRIAT",
     "status": "Ongoing program",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {
       "farmer_required": true
     },
-    "source_refresh_status": "Source could not be verified; existing URL retained."
+    "source_refresh_status": "Verified by direct HTTP."
   },
   {
     "name": "CM Punjab Asaan Karobar Card",
@@ -173,7 +173,7 @@
     "official_url": "https://psic.punjab.gov.pk/node/177",
     "keywords": "business entrepreneur small business loan asaan karobar card interest free SME",
     "status": "Ongoing",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {
       "min_age": 21,
       "max_age": 57,
@@ -202,7 +202,7 @@
     "official_url": "https://psic.punjab.gov.pk/node/178",
     "keywords": "business SME finance loan entrepreneur asaan karobar interest free startup expansion",
     "status": "Ongoing",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {
       "min_age": 25,
       "max_age": 55,
@@ -230,7 +230,7 @@
     "official_url": "https://hed.punjab.gov.pk/node/1674",
     "keywords": "student scholarship university tuition education honhaar financial help",
     "status": "Government program; verify current intake",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {
       "student_required": true,
       "max_income": 300000,
@@ -262,7 +262,7 @@
     "official_url": "https://hed.punjab.gov.pk/node/1712",
     "keywords": "student laptop education university college digital inclusion computer device",
     "status": "Published criteria; verify current intake",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {
       "student_required": true,
       "min_marks": 65,
@@ -286,7 +286,7 @@
     "official_url": "https://zakat.punjab.gov.pk/useful-links",
     "keywords": "student education stipend financial assistance zakat scholarship poor",
     "status": "Departmental program; verify current process",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {
       "student_required": true
     },
@@ -308,7 +308,7 @@
     "official_url": "https://energy.punjab.gov.pk/node/165",
     "keywords": "solar panel electricity bill energy free solar low consumption",
     "status": "Government flagship program; verify current intake",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {},
     "source_refresh_status": "Verified by direct HTTP."
   },
@@ -327,7 +327,7 @@
     "official_url": "https://agripunjab.punjab.gov.pk/agri-adp-cminitiatives",
     "keywords": "agriculture sesame soybean canola crop model farm seed yield",
     "status": "Official Punjab initiative / scheme",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {
       "farmer_required": true
     },
@@ -348,7 +348,7 @@
     "official_url": "https://agripunjab.punjab.gov.pk/agri-adp-cminitiatives",
     "keywords": "farmer irrigation water efficient agriculture laser land leveller watercourse",
     "status": "Official Punjab initiative / scheme",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {
       "farmer_required": true
     },
@@ -369,7 +369,7 @@
     "official_url": "https://agripunjab.punjab.gov.pk/agri-adp-cminitiatives",
     "keywords": "farmer machinery hi tech farm mechanization loan harvester planter tractor financing",
     "status": "Official Punjab initiative / scheme",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {
       "farmer_required": true
     },
@@ -390,7 +390,7 @@
     "official_url": "https://agripunjab.punjab.gov.pk/agri-adp-cminitiatives",
     "keywords": "barani rainfed farmer water reservoir mini dam irrigation solar water",
     "status": "Official Punjab initiative / scheme",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {
       "farmer_required": true
     },
@@ -411,7 +411,7 @@
     "official_url": "https://agripunjab.punjab.gov.pk/agri-malls",
     "keywords": "farmer agriculture mall inputs services seeds fertilizer support",
     "status": "Official Punjab initiative / scheme",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {
       "farmer_required": true
     },
@@ -432,7 +432,7 @@
     "official_url": "https://agripunjab.punjab.gov.pk/node/10154",
     "keywords": "farmer PRIAT irrigation solar water storage machinery value addition markets",
     "status": "Official Punjab initiative / scheme",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {
       "farmer_required": true
     },
@@ -453,7 +453,7 @@
     "official_url": "https://agripunjab.punjab.gov.pk/node/10154",
     "keywords": "farmer super seeder subsidy residue wheat machinery clean air",
     "status": "Official Punjab initiative / scheme",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {
       "farmer_required": true
     },
@@ -474,7 +474,7 @@
     "official_url": "https://psic.punjab.gov.pk/node/14",
     "keywords": "business loan entrepreneurship SME youth startup small enterprise financing",
     "status": "Official Punjab initiative / scheme",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {},
     "source_refresh_status": "Verified by direct HTTP."
   },
@@ -493,7 +493,7 @@
     "official_url": "https://psic.punjab.gov.pk/index.php/ongoing",
     "keywords": "artisan cottage industry business loan interest free handicraft self employment",
     "status": "Official Punjab initiative / scheme",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {},
     "source_refresh_status": "Verified by direct HTTP."
   },
@@ -512,7 +512,7 @@
     "official_url": "https://psic.punjab.gov.pk/projects",
     "keywords": "women entrepreneur incubator business loan startup financing WBIC",
     "status": "Official Punjab initiative / scheme",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {},
     "source_refresh_status": "Verified by direct HTTP."
   },
@@ -531,7 +531,7 @@
     "official_url": "https://psic.punjab.gov.pk/index.php/ongoing",
     "keywords": "women business incubation entrepreneurship startup mentoring women",
     "status": "Official Punjab initiative / scheme",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {},
     "source_refresh_status": "Verified by direct HTTP."
   },
@@ -550,7 +550,7 @@
     "official_url": "https://hed.punjab.gov.pk/rehmatul-lil-alameen_scholarship",
     "keywords": "student scholarship merit need intermediate bachelor rahmatul lil alameen",
     "status": "Official Punjab initiative / scheme",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {
       "student_required": true
     },
@@ -571,7 +571,7 @@
     "official_url": "https://hed.punjab.gov.pk/peef",
     "keywords": "student PEEF scholarship needy talented tuition education",
     "status": "Official Punjab initiative / scheme",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {
       "student_required": true
     },
@@ -592,7 +592,7 @@
     "official_url": "https://hed.punjab.gov.pk/node/1670",
     "keywords": "student MDCAT ECAT entrance test free preparation coaching",
     "status": "Official Punjab initiative / scheme",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {
       "student_required": true
     },
@@ -613,7 +613,7 @@
     "official_url": "https://hed.punjab.gov.pk/node/1672",
     "keywords": "female student college transport bus education",
     "status": "Official Punjab initiative / scheme",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {
       "student_required": true
     },
@@ -634,7 +634,7 @@
     "official_url": "https://energy.punjab.gov.pk/",
     "keywords": "solar renewable energy clean energy household technology",
     "status": "Official Punjab initiative / scheme",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {},
     "source_refresh_status": "Verified by direct HTTP."
   },
@@ -653,7 +653,7 @@
     "official_url": "https://energy.punjab.gov.pk/",
     "keywords": "solar panel manufacturing renewable energy industry investment",
     "status": "Official Punjab initiative / scheme",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {},
     "source_refresh_status": "Verified by direct HTTP."
   },
@@ -672,7 +672,7 @@
     "official_url": "https://zakat.punjab.gov.pk/node/139",
     "keywords": "poor rashan food zakat monthly assistance financial support",
     "status": "Official Punjab initiative / scheme",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {},
     "source_refresh_status": "Verified by direct HTTP."
   },
@@ -691,7 +691,7 @@
     "official_url": "https://zakat.punjab.gov.pk/rules-regulations",
     "keywords": "poor financial assistance guzara allowance zakat subsistence",
     "status": "Official Punjab initiative / scheme",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {},
     "source_refresh_status": "Verified by direct HTTP."
   },
@@ -710,7 +710,7 @@
     "official_url": "https://swd.punjab.gov.pk/himmatcard",
     "keywords": "PWD disability himmat card stipend financial assistance social welfare",
     "status": "Official Punjab initiative / scheme",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {},
     "source_refresh_status": "Verified by direct HTTP."
   },
@@ -729,7 +729,7 @@
     "official_url": "https://swd.punjab.gov.pk/dgsw_drplc_high",
     "keywords": "marriage assistance dheet rani collective marriage poor family welfare",
     "status": "Official Punjab initiative / scheme",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {},
     "source_refresh_status": "Verified by direct HTTP."
   },
@@ -748,7 +748,7 @@
     "official_url": "https://punjab.gov.pk/cm-punjab-livestock-card",
     "keywords": "livestock farmer cattle buffalo calf feed wanda silage loan livestock card",
     "status": "Official Punjab initiative / scheme",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {
       "farmer_required": true
     },
@@ -769,7 +769,7 @@
     "official_url": "https://www.punjab.gov.pk/attrw-scheme",
     "keywords": "livestock rural women cow buffalo heifer asset transfer south punjab livelihood",
     "status": "Official Punjab initiative / scheme",
-    "last_verified": "September 2026",
+    "last_verified": "October 2026",
     "rules": {},
     "source_refresh_status": "Verified via official search evidence; direct HTTP unavailable."
   }
